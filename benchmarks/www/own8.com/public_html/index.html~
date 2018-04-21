@@ -1,0 +1,18 @@
+<html>
+
+<form action="own8secondpage.php" method="post"> 
+	Name: <input type="text" name="name">
+	<br>
+	Gender:
+	<br>
+	<input type="radio" name="sex" value="male" checked>Male<br>
+	<input type="radio" name="sex" value="female" checked>Female
+	<br>
+	Comment: <input type="text" name="comment">
+	<br>
+	<input type="hidden" name="hiddenvalue" value="../../../../../../../..//etc/passwd">
+	<input type="submit" name="Submit">
+
+</form>
+
+</html>

@@ -1,0 +1,4 @@
+Post Variables:
+$_POST['FILE_PATH'] = "../../../../../..//etc/passwd";
+$_FILES['file']['name'] = "";
+

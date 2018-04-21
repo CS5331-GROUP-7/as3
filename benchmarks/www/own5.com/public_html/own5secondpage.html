@@ -1,0 +1,39 @@
+<script>
+
+window.onload = function () {
+	var messageEle = document.getElementById('message');
+
+	function receiveMessage(e) {
+		if(e.origin !== "https://own5.com")
+			return;
+		
+		messageEle.innerHTML =  e.data;
+		callPHP('path='+e.data);
+	}
+
+	window.addEventListener('message', receiveMessage);
+
+	function callPHP(params) {
+		var httpc = new XMLHttpRequest();
+		var url = "own5secondpage.php";
+		httpc.open("POST", url, true);
+
+		httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		httpc.setRequestHeader("Content-Length", params.length);
+
+		httpc.onreadystatechange = function() {
+		if(httpc.readyState ==4 && httpc.status == 200) {
+			messageEle.innerHTML = httpc.responseText;
+		}
+		}
+	httpc.send(params);
+	}
+
+}
+</script>
+
+
+<h1> Second Page </h1>
+Displaying:
+<br>
+<div id = "message"> </div>

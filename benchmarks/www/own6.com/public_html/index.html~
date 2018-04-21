@@ -1,0 +1,11 @@
+<html>
+
+<body>
+	<form method="link" action="own6page2.html">
+		Type an input: <input type="text" name="input">
+		<input type = "submit" value = "Submit" >
+	</form>
+
+</body>
+
+</html>

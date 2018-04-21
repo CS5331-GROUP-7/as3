@@ -1,0 +1,18 @@
+<?php
+
+$folder = $_GET["folder"];
+$file = $_GET["file"];
+
+echo "Retrieving " . $folder . $file;
+
+echo "<br>";
+
+echo "Language Selected: ";
+echo "<br>";
+include($_GET['language']);
+
+?>
+
+
+
+?>
