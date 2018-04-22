@@ -4,8 +4,8 @@ import urllib
 from crawler.items import *
 import logging
 from lxml import html
-
 import urlparse
+import json
 
 def log(msg):
     logging.log(45,msg)
@@ -39,26 +39,33 @@ def fetch_form(url, body):
 class Spider(scrapy.Spider):
     name = "p1"
 
+    def __init__(self, *args, **kwargs):
+        super(Spider, self).__init__(*args, **kwargs)
+        self.default_headers = {}
+        self.allowed_domains = {}
+
     def start_requests(self):
-        urls = [
-            'http://target.com',
-            'http://own1.com',
-            'http://own2.com',
-            'http://own3.com',
-            'http://own4.com',
-            'http://own5.com',
-            'http://own6.com',
-            'http://own7.com',
-            'http://own8.com',
-            'http://own9.com',
-            'http://own10.com',
-            'http://own11.com',
-        ]
-        allowed_domains = [
-            'target.com',
-        ]
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+        items_to_crawl = json.load(open('config.json'))
+        for item in items_to_crawl:
+            url_str = item['url']
+            url = urlparse.urlparse(url_str)
+            hostname = url.hostname
+            self.default_headers[hostname]=None
+
+            if 'username' in item and 'password' in item:
+                pass
+                #todo login
+            if 'headers' in item:
+                self.default_headers[hostname] = item['headers']
+
+            self.allowed_domains[hostname] = [hostname]
+            if 'allowed_domains' in item:
+                allowed_domains = item['allowed_domains']
+                if not type(allowed_domains) == list:allowed_domains = [allowed_domains]
+                self.allowed_domains[hostnmame] = allowed_domains
+            log(self.default_headers[hostname])
+            yield scrapy.Request(url=url_str,headers=self.default_headers[hostname],callback=self.parse)
+
 
     def parse(self, response):
 

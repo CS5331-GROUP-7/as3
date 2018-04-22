@@ -1,2 +1,4 @@
 #!/bin/sh
-scrapy crawl p1 -o p1.json -L ERROR
+rm p1.json
+python gen_config.py
+scrapy crawl p1 -a config=config.json -o p1.json -L INFO
