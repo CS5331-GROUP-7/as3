@@ -1,0 +1,7 @@
+;phpinfo()
+phpinfo()
+;echo \"afadsfaefasdfafezdfa\"
+echo \"afadsfaefasdfafezdfa\"
+;cat /etc/passwd
+$flag
+; echo '$flag'
