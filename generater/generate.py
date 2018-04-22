@@ -4,6 +4,10 @@ default_header = {
     "Referrer": "http://google.com",
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
     }
+def DelLastChar(str):
+    str_list = list(str)
+    str_list.pop()
+    return "".join(str_list)
 
 def byteify(input):
     if isinstance(input, dict):
@@ -31,7 +35,9 @@ class Generater:
         with open(payload_file,mode='r',encoding='utf-8') as file1:
             load_dict =[]
             for item in file1:
-                load_dict.append(byteify(item))
+                item1 = byteify(item)
+                item1 = DelLastChar(item1)
+                load_dict.append(item1)
             self.payloads = load_dict
 
     def generate(self,classname):
@@ -44,8 +50,8 @@ class Generater:
             for payload in self.payloads:
                 for i,data in enumerate(item['param']):
                     paras = {}
-                    for data in item['param']:
-                        paras[data]=""
+                    for data1 in item['param']:
+                        paras[data1]=""
                     paras[data] = payload 
                     if(item.has_key('headers')):
                         request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
