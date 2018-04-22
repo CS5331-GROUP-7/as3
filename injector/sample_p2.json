@@ -1,0 +1,21 @@
+{
+  "class": "SQL Injection",
+  "results": {
+    "http://target.com": [
+      {
+        "endpoint": "/sqli/sqli.php",
+        "params": {
+          "username": "' or '1'='1"
+        },
+        "method": "POST"
+      },
+      {
+        "endpoint": "/directorytraversal/directorytraversal.php",
+        "params": {
+          "ascii": "../../../../../etc/passwd"
+        },
+        "method": "GET"
+      }
+    ]
+  }
+}
