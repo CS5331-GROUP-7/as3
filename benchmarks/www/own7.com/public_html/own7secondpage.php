@@ -33,5 +33,8 @@ if(!isset($_SESSION['uid'])){
 	<input type="submit" value="My Info">
 </form>
 
+<form action="/pages/logout.php" name="b4">
+	<input type="submit" value="logout">
+</form>
 
 </html>
