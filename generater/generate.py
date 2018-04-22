@@ -45,13 +45,23 @@ class Generater:
             load_dict = byteify(load_dict)
             payloads = load_dict['payloads']
 
+        with open('default.json',mode='r',encoding='utf-8') as file:
+            load_dict = json.load(file)
+            load_dict = byteify(load_dict)
+            default_name = load_dict['payloads']
+
+
         request = []
         for item in self.urls:
             for payload in payloads:
                 for i,data in enumerate(item['param']):
                     paras = {}
                     for data1 in item['param']:
-                        paras[data1]=""
+                        if(default_name.has_key(data1)):
+                            paras[data1]=default_name[data1]
+                        else:
+                            paras[data1]=""
+                        
                     paras[data] = payload 
                     if(item.has_key('headers')):
                         request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
