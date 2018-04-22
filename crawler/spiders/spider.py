@@ -42,6 +42,17 @@ class Spider(scrapy.Spider):
     def start_requests(self):
         urls = [
             'http://target.com',
+            'http://own1.com',
+            'http://own2.com',
+            'http://own3.com',
+            'http://own4.com',
+            'http://own5.com',
+            'http://own6.com',
+            'http://own7.com',
+            'http://own8.com',
+            'http://own9.com',
+            'http://own10.com',
+            'http://own11.com',
         ]
         allowed_domains = [
             'target.com',
