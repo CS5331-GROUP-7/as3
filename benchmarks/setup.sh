@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo cp -Rvf sites-enabled /etc/apache2/sites-enabled
+sudo cp -Rvf sites-enabled /etc/apache2/
 cp -Rvf ssl /home/cs5331/Desktop
 sudo cp -Rvf www /var/
 sudo cp hosts /etc/hosts
