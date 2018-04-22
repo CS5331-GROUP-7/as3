@@ -52,15 +52,27 @@ class Injector:
     def do_inject(self, url, method, params):
         # check for login
         if method.upper() == "GET":
-            return self.do_get()
+            return self.do_get(url, params)
         return self.do_post(url, params)
 
-    def do_get(self):
+    def do_get(self, url, params):
         """
         GET without login
         :return:
         """
-        pass
+        # use original params
+        o_req = requests.get(url, params=None)
+        # replace away original param
+        o_req_content = o_req.content
+        o_req_content = o_req_content.replace("None", "")
+
+        atk_req = requests.get(url, params=params)
+        atk_req_content = atk_req.content
+        for k, v in params.iteritems():
+            atk_req_content = atk_req_content.replace(k, "")
+            atk_req_content = atk_req_content.replace(v, "")
+
+        return is_html_diff(o_req_content, atk_req_content)
 
     def do_get_login(self):
         """
@@ -74,20 +86,17 @@ class Injector:
         POST without login
         :return:
         """
+        # use original data
         o_req = requests.post(url, data=None, headers=default_header)
         # o_req_status = o_req.status_code
         o_req_content = o_req.content
+        o_req_content = o_req_content.replace("None", "")
 
         atk_req = requests.post(url, data=params, headers=default_header)
         # atk_req_status = atk_req.status_code
         atk_req_content = atk_req.content
 
-        o_req_content = o_req_content.replace("None", "")
-
-        diff_str = diff_html(o_req_content, atk_req_content)
-        if diff_str.count("+") > diff_str.count("-"):
-            return True
-        return None
+        return is_html_diff(o_req_content, atk_req_content)
 
     def do_post_login(self):
         """
@@ -95,6 +104,13 @@ class Injector:
         :return:
         """
         pass
+
+
+def is_html_diff(a, b):
+    diff_str = diff_html(a, b)
+    if diff_str.count("\n+ ") > diff_str.count("\n- "):
+        return True
+    return None
 
 
 def diff_html(a, b):
