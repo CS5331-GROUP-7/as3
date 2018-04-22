@@ -13,14 +13,17 @@ target = {'url':'http://target.com',
             }
          }
 own7_cookie = {'url':'http://own7.com',
+               'allowed_domains':'own7.com',
+               'nocrawl':'logout',
                'headers':{
-                   'Cookie':'PHPSESSID=lsvu3sso4reeatetds7cajkvv0; UserDetails=own7own7; loggedin=yes'
+
+                   'Cookie': 'PHPSESSID=lsvu3sso4reeatetds7cajkvv0; UserDetails=own7own7; loggedin=yes'
                    },
                }
 
 #config.append(own7)
 config.append(own7_cookie)
-#config.append(target)
+# config.append(target)
 
 
 with open('config.json', 'w') as outfile:

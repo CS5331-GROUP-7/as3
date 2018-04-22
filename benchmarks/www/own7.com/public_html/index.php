@@ -15,6 +15,7 @@ Own7.com
 	<input type="submit" value="Go!">
 </form>
 
+<li><a href="https://own8.com">Own 8 domain</a></li>
 </body>
 
 
