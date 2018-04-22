@@ -10,7 +10,7 @@ def json_default(obj):
 
 
 # classes below may need additional methods of adding and converting payloads/url
-class BaseOutput(object):
+class BaseOutputModel(object):
     def __init__(self, name):
         """
         object to convert to JSON output format required
@@ -27,25 +27,30 @@ class BaseOutput(object):
 
     def get_json(self):
         # call to generate json output
-        return json.dumps(self, default=json_default)
+        return json.dumps(self, default=json_default, indent=4)
 
 
 # Formats
-class SQLInjection(BaseOutput):
+class SQLInjectionModel(BaseOutputModel):
     def __init__(self):
-        super(SQLInjection, self).__init__("SQL Injection")
+        super(SQLInjectionModel, self).__init__("SQL Injection")
 
 
-class SSCInjection(BaseOutput):
+class SSCInjectionModel(BaseOutputModel):
     def __init__(self):
-        super(SSCInjection, self).__init__("Server Side Code Injection")
+        super(SSCInjectionModel, self).__init__("Server Side Code Injection")
 
 
-class DirectoryTraversal(BaseOutput):
+class DirectoryTraversalModel(BaseOutputModel):
     def __init__(self):
-        super(DirectoryTraversal, self).__init__("Directory Traversal")
+        super(DirectoryTraversalModel, self).__init__("Directory Traversal")
 
 
-class OpenRedirect(BaseOutput):
+class OpenRedirectModel(BaseOutputModel):
     def __init__(self):
-        super(OpenRedirect, self).__init__("Open Redirect")
+        super(OpenRedirectModel, self).__init__("Open Redirect")
+
+
+class CommandInjectionModel(BaseOutputModel):
+    def __init__(self):
+        super(CommandInjectionModel, self).__init__("Command Injection")
