@@ -21,6 +21,12 @@ class BaseOutput(object):
             url: [payloads]
         }
 
+    def add_payload(self, url, payload):
+        if url in self.results:
+            self.results.get(url).append(payload)
+        else:
+            self.results[url] = [payload]
+
     def get_json(self):
         return json.dumps(self, default=json_default)
 
