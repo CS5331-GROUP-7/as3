@@ -18,8 +18,8 @@ results_dir = "../results/"
 results_sql = results_dir + "sql_results.json"
 results_ssc = results_dir + "ssc_results.json"
 results_dtr = results_dir + "dtr_results.json"
-results_ore = results_dtr + "ore_results.json"
-results_cmi = results_dtr + "cmi_results.json"
+results_ore = results_dir + "ore_results.json"
+results_cmi = results_dir + "cmi_results.json"
 
 default_header = {
     "Referrer": "http://google.com",
@@ -52,9 +52,9 @@ class Injector:
                 if "param" in v:
                     param = v["param"]
 
-                self.crawler_info[v["url"]] = {
+                self.crawler_info[v["type"]+v["url"]] = {
                     "headers": header,
-                    "params": param
+                    "param": param
                 }
         hf.close()
 
@@ -68,12 +68,12 @@ class Injector:
         # start attacking
         # self.start_inject()
 
-        if not self.sqli_results.results\
-                and not self.ssci_results.results\
-                and not self.dtra_results.results\
-                and not self.opre_results.results\
-                and not self.cmdi_results.results:
-            print("==== NO RESULTS ====")
+        # if not self.sqli_results.results\
+        #         and not self.ssci_results.results\
+        #         and not self.dtra_results.results\
+        #         and not self.opre_results.results\
+        #         and not self.cmdi_results.results:
+        #     print("==== NO RESULTS ====")
 
         # end and output
         # self.end_inject()
@@ -84,40 +84,42 @@ class Injector:
         :return:
         """
 
-        for p in self.payloads:
-            url = p["url"]
-            o_params = {}
-            headers = default_header
-            if url in self.crawler_info:
-                vals = self.crawler_info.get(url)
-                if "param" in vals:
-                    o_params = vals["param"]
-                if "headers" in vals:
-                    headers = vals["headers"]
+        for v in self.payloads:
+            for p in v:
+                url = p["url"]
+                key = p["type"]+url
+                o_params = {}
+                headers = default_header
+                if key in self.crawler_info:
+                    vals = self.crawler_info.get(key)
+                    if "param" in vals:
+                        o_params = vals["param"]
+                    if "headers" in vals and vals["headers"] is not None:
+                        headers = vals["headers"]
 
-            res = self.do_inject(url,
-                                 p["type"].upper(),
-                                 p["param"],
-                                 o_params,
-                                 headers)
-            if res is False or res is None:
-                continue
+                res = self.do_inject(url,
+                                     p["type"].upper(),
+                                     p["param"],
+                                     o_params,
+                                     headers)
+                if res is False or res is None:
+                    continue
 
-            # add to corresponding result
-            if p["class"] == "SQL Injection":
-                self.sqli_results.add_payload(url, p)
-            elif p["class"] == "Server Side Code Injection":
-                self.ssci_results.add_payload(url, p)
-            elif p["class"] == "Directory Traversal":
-                self.dtra_results.add_payload(url, p)
-            elif p["class"] == "Open Redirect":
-                self.opre_results.add_payload(url, p)
-            elif p["class"] == "Command Injection":
-                self.cmdi_results.add_payload(url, p)
-            else:
-                print(str.format("[ERR]: Unable to identify payload for {} ({})"), p["url"], p["class"])
-                continue
-            print(str.format("[VUL]: {} ({})", p["url"], p["type"]))
+                # add to corresponding result
+                if p["class"] == "SQL Injection":
+                    self.sqli_results.add_payload(url, p)
+                elif p["class"] == "Server Side Code Injection":
+                    self.ssci_results.add_payload(url, p)
+                elif p["class"] == "Directory Traversal":
+                    self.dtra_results.add_payload(url, p)
+                elif p["class"] == "Open Redirect":
+                    self.opre_results.add_payload(url, p)
+                elif p["class"] == "Command Injection":
+                    self.cmdi_results.add_payload(url, p)
+                else:
+                    print(str.format("[ERR]: Unable to identify payload for {} ({})"), p["url"], p["class"])
+                    continue
+                print(str.format("[VUL]: {} ({})", p["url"], p["type"]))
 
     def do_inject(self, url, method, atk_params, o_params, headers):
         if method.upper() == "GET":
@@ -164,7 +166,11 @@ class Injector:
         o_req_content = o_req.content
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
-            o_req_content = o_req_content.replace(v, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    o_req_content = o_req_content.replace(p, "")
+            else:
+                o_req_content = o_req_content.replace(v, "")
 
         atk_req = requests.get(url, params=atk_params, headers=headers, verify=False)
         atk_req_content = atk_req.content
@@ -184,7 +190,11 @@ class Injector:
         o_req_content = o_req.content
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
-            o_req_content = o_req_content.replace(v, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    o_req_content = o_req_content.replace(p, "")
+            else:
+                o_req_content = o_req_content.replace(v, "")
 
         atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
         atk_req_content = atk_req.content
@@ -203,15 +213,24 @@ def is_html_diff(a, b):
 
 
 def diff_html(a, b):
-    a_soup = bs4.BeautifulSoup(a, "lxml")
-    b_soup = bs4.BeautifulSoup(b, "lxml")
+    a_soup = bs4.BeautifulSoup(a, "html.parser")
+    b_soup = bs4.BeautifulSoup(b, "html.parser")
+
+    a_pre = []
+    for ap in a_soup.find_all("pre"):
+        a_pre = a_pre + ap.text.split()
+
+    b_pre = []
+    for bp in b_soup.find_all("pre"):
+        b_pre = b_pre + bp.text.split()
 
     d = Differ()
-    diff = d.compare(list(a_soup.stripped_strings), list(b_soup.stripped_strings))
+    # diff = d.compare(list(a_soup.stripped_strings), list(b_soup.stripped_strings))
+    diff = d.compare(list(a_soup.stripped_strings) + a_pre, list(b_soup.stripped_strings) + b_pre)
     return '\n'.join(diff)
 
 
 # i = Injector("sample_p2.json")
 i = Injector(p2_file_path)
 i.start_inject()
-# i.end_inject()
+i.end_inject()
