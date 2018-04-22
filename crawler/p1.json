@@ -1,18 +1,5 @@
 [
 {"url": "http://target.com", "headers": {"referer": null, "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/commandinjection/commandinjection.php", "type": "POST", "param": {"host": ["google.com"]}},
-{"url": "http://target.com/commandinjection/commandinjection.php", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/openredirect/openredirect.html", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/serverside/serverside.php", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/directorytraversal/cats.html", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/sqli/sqli.php", "type": "POST", "param": {"username": ["None"]}},
-{"url": "http://target.com/sqli/sqli.php", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/csrf/csrf.php", "type": "POST", "param": {"csrftoken": ["abcdef1235"], "secret": ["SECRET"]}},
-{"url": "http://target.com/csrf/csrf.php", "headers": {"referer": "http://target.com", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
-{"url": "http://target.com/directorytraversal/directorytraversal.php", "headers": {"referer": "http://target.com/directorytraversal/cats.html", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {"ascii": ["angry.ascii"]}},
-{"url": "http://target.com/openredirect/success.html", "headers": {"referer": "http://target.com/openredirect/openredirect.html", "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}}
-][
-{"url": "http://target.com", "headers": {"referer": null, "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
 {"url": "https://own1.com/index.php", "type": "POST", "param": {"page": ["main"]}},
 {"url": "https://own1.com/index.php", "headers": {"referer": null, "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"}, "type": "GET", "param": {}},
 {"url": "https://own2.com/own2submit.php", "type": "POST", "param": {"comment": ["None"]}},
