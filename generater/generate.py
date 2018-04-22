@@ -21,33 +21,33 @@ def byteify(input):
         return input
 
 class Generater:
-    def __init__(self, payload_file):
+    def __init__(self):
         """
         Starts an injector for a specific payload file
         :param payload_file: JSON file with payloads relating to a certain endpoint
         """
         # read payload_file and store
         urls = []
+        self.result = []
         with open('../crawler/p1.json',mode='r',encoding='utf-8') as file:
             load_dict = json.load(file)
             load_dict = byteify(load_dict)
             self.urls = load_dict
-        with open(payload_file,mode='r',encoding='utf-8') as file1:
-            load_dict =[]
-            for item in file1:
-                item1 = byteify(item)
-                item1 = DelLastChar(item1)
-                load_dict.append(item1)
-            self.payloads = load_dict
 
-    def generate(self,classname):
+    def generate(self,classname,payload_file):
         """
         Generate the request
         :return file named p2.json
         """
+        payloads = []
+        with open(payload_file,mode='r',encoding='utf-8') as file:
+            load_dict = json.load(file)
+            load_dict = byteify(load_dict)
+            payloads = load_dict['payloads']
+
         request = []
         for item in self.urls:
-            for payload in self.payloads:
+            for payload in payloads:
                 for i,data in enumerate(item['param']):
                     paras = {}
                     for data1 in item['param']:
@@ -57,10 +57,21 @@ class Generater:
                         request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
                     else:
                         request.append({"class":classname,"url":item['url'],"param":paras,"type":item['type']})
+        self.result.append(request)
         #print request
+    def savefile(self):
+        #print self.result
         with open('p2.json','w') as f:
-            f.write(unicode(json.dumps(request, ensure_ascii=False,indent = 4)))                
+            f.write(unicode(json.dumps(self.result, indent = 4)))                
 
-
-generater = Generater('sql.txt');
-generater.generate("classname");
+def main():
+    generater = Generater();
+    #generater.generate('Directory Traversal','traversal.json');
+    #generater.generate('Directory Traversal','traversal-passwd.txt');
+    generater.generate('SQL Injection','sql.json');
+    generater.generate('Command Injection','commend.json');
+    generater.generate('Open Redirect','redirect.json');
+    
+    generater.savefile();
+    
+main()
