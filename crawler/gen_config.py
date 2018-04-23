@@ -4,7 +4,14 @@ config = []
 own7 = { 'url':'http://own7.com',
          'username':'own7',
          'password':'own7',
-         'login_url':'http://own7.com',
+         'login':{
+             'url':'http://own7.com/own2secondpage.php',
+             'formdata':{
+                 'username':'own7',
+                 'password':'own7',
+                 'others':'test'
+                 }
+             }
         }
 target = {'url':'http://target.com',
         'headers':{
@@ -21,8 +28,8 @@ own7_cookie = {'url':'http://own7.com',
                    },
                }
 
-#config.append(own7)
-config.append(own7_cookie)
+config.append(own7)
+#config.append(own7_cookie)
 # config.append(target)
 
 

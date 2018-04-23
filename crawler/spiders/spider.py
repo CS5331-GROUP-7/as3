@@ -71,9 +71,6 @@ class Spider(scrapy.Spider):
             url = urlparse.urlparse(url_str)
             hostname = url.hostname
 
-            if 'username' in item and 'password' in item:
-                pass
-                #todo login
             if 'headers' in item:
                 config['default_headers'] = item['headers']
 
@@ -90,6 +87,10 @@ class Spider(scrapy.Spider):
 
 
             self.config[hostname]=config
+
+            if 'login' in item:
+                pass
+                #todo login
             yield scrapy.Request(url=url_str,meta={'dont_merge_cookies': True},headers=config['default_headers'],callback=self.parse)
 
 
