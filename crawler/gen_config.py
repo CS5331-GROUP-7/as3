@@ -1,14 +1,14 @@
 import json
 config = []
 
-own7 = { 'url':'http://own7.com',
+own7 = { 'url':'https://own7.com',
          'nocrawl':'logout',
         'headers':{
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
             'Referer': 'https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py'
             },
          'login':{
-             'url':'http://own7.com/own7secondpage.php',
+             'url':'https://own7.com/own7secondpage.php',
              'formdata':{
                  'user':['own7'],
                  'password':'own7',
@@ -33,7 +33,19 @@ own7_cookie = {'url':'http://own7.com',
 own4 = {'url':'http://own4.com'}
 config.append(own7)
 config.append(own4)
-# config.append(own7_cookie)
+
+# config.append({"url": "https://own1.com"})
+# config.append({"url": "https://own2.com"})
+# config.append({"url": "https://own3.com"})
+# config.append({"url": "https://own4.com"})
+# config.append({"url": "https://own5.com"})
+# config.append({"url": "https://own6.com"})
+# config.append(own7)
+# config.append({"url": "https://own8.com"})
+# config.append({"url": "https://own9.com"})
+# config.append({"url": "https://own10.com"})
+# config.append({"url": "https://own11.com"})
+# # config.append(own7_cookie)
 # config.append(target)
 
 

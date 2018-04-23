@@ -54,19 +54,20 @@ class Generater:
         request = []
         for item in self.urls:
             for payload in payloads:
-                for i,data in enumerate(item['param']):
-                    paras = {}
-                    for data1 in item['param']:
-                        if(default_name.has_key(data1)):
-                            paras[data1]=default_name[data1]
+                if 'param' in item:
+                    for i,data in enumerate(item['param']):
+                        paras = {}
+                        for data1 in item['param']:
+                            if(default_name.has_key(data1)):
+                                paras[data1]=default_name[data1]
+                            else:
+                                paras[data1]=""
+
+                        paras[data] = payload
+                        if(item.has_key('headers')):
+                            request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
                         else:
-                            paras[data1]=""
-                        
-                    paras[data] = payload 
-                    if(item.has_key('headers')):
-                        request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
-                    else:
-                        request.append({"class":classname,"url":item['url'],"param":paras,"type":item['type']})
+                            request.append({"class":classname,"url":item['url'],"param":paras,"type":item['type']})
         self.result.append(request)
         #print request
     def savefile(self):

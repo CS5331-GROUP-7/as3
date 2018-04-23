@@ -1,5 +1,6 @@
 import bs4
 import errno
+import itertools
 import json
 import os
 import re
@@ -8,6 +9,7 @@ from difflib import Differ
 from result_models import SQLInjectionModel, SSCInjectionModel,\
     DirectoryTraversalModel, OpenRedirectModel, CommandInjectionModel
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from tqdm import tqdm
 from urlparse import urlparse
 import time
 
@@ -29,7 +31,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_nums = re.compile(r"[\d]")
+regex_numsym = re.compile(r"[\d|_^+]")
 
 
 class Injector:
@@ -41,7 +43,7 @@ class Injector:
         # read payload_file and store
         with open(payload_file) as pf:
             j = json.load(pf)
-            self.payloads = j
+            self.payloads = list(itertools.chain.from_iterable(j))
         pf.close()
 
         # read for header info
@@ -53,14 +55,15 @@ class Injector:
                 if "headers" in v:
                     header = v["headers"]
 
-                param = None
+                param = {}
                 if "param" in v:
                     param = v["param"]
 
-                self.crawler_info[v["type"]+v["url"]] = {
-                    "headers": header,
-                    "param": param
-                }
+                if "type" in v:
+                    self.crawler_info[v["type"]+v["url"]] = {
+                        "headers": header,
+                        "param": param
+                    }
         hf.close()
 
         # for output
@@ -89,43 +92,42 @@ class Injector:
         :return:
         """
 
-        for v in self.payloads:
-            for p in v:
-                url = p["url"]
-                key = p["type"]+url
-                o_params = {}
-                headers = default_header
-                if key in self.crawler_info:
-                    vals = self.crawler_info.get(key)
-                    if "param" in vals:
-                        o_params = vals["param"]
-                    if "headers" in vals and vals["headers"] is not None:
-                        headers = vals["headers"]
+        for p in tqdm(self.payloads):
+            url = p["url"]
+            key = p["type"]+url
+            o_params = {}
+            headers = default_header
+            if key in self.crawler_info:
+                vals = self.crawler_info.get(key)
+                if "param" in vals:
+                    o_params = vals["param"]
+                if "headers" in vals and vals["headers"] is not None:
+                    headers = vals["headers"]
 
-                res = self.do_inject(url,
-                                     p["type"].upper(),
-                                     p["param"],
-                                     o_params,
-                                     headers,
-                                     p["class"])
-                if res is False or res is None:
-                    continue
+            res = self.do_inject(url,
+                                 p["type"].upper(),
+                                 p["param"],
+                                 o_params,
+                                 headers,
+                                 p["class"])
+            if res is False or res is None:
+                continue
 
-                # add to corresponding result
-                if p["class"] == "SQL Injection":
-                    self.sqli_results.add_payload(url, p)
-                elif p["class"] == "Server Side Code Injection":
-                    self.ssci_results.add_payload(url, p)
-                elif p["class"] == "Directory Traversal":
-                    self.dtra_results.add_payload(url, p)
-                elif p["class"] == "Open Redirect":
-                    self.opre_results.add_payload(url, p)
-                elif p["class"] == "Command Injection":
-                    self.cmdi_results.add_payload(url, p)
-                else:
-                    print(str.format("[ERR]: Unable to identify payload for {} ({})"), p["url"], p["class"])
-                    continue
-                print(str.format("[VUL]: {} ({})", p["url"], p["type"]))
+            # add to corresponding result
+            if p["class"] == "SQL Injection":
+                self.sqli_results.add_payload(url, p)
+            elif p["class"] == "Server Side Code Injection":
+                self.ssci_results.add_payload(url, p)
+            elif p["class"] == "Directory Traversal":
+                self.dtra_results.add_payload(url, p)
+            elif p["class"] == "Open Redirect":
+                self.opre_results.add_payload(url, p)
+            elif p["class"] == "Command Injection":
+                self.cmdi_results.add_payload(url, p)
+            else:
+                tqdm.write(str.format("[ERR]: Unable to identify payload for {} ({})"), p["url"], p["class"])
+                continue
+            tqdm.write(str.format("[VUL]: {} ({})", p["url"], p["type"]))
 
     def do_inject(self, url, method, atk_params, o_params, headers, atk_type):
         if method.upper() == "GET":
@@ -136,11 +138,11 @@ class Injector:
             atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
 
         if o_req.status_code == 500 or atk_req.status_code == 500:
-            print(str.format("[WARN]: Status 500 encountered while processing request for  ({})", url, method))
+            tqdm.write(str.format("[WARN]: Status 500 encountered while processing request for  ({})", url, method))
             return False
 
         # use original params
-        o_req_content = o_req.content
+        o_req_content = unicode(o_req.content, errors="replace")
         # replace away original param
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
@@ -150,7 +152,7 @@ class Injector:
             else:
                 o_req_content = o_req_content.replace(v, "")
 
-        atk_req_content = atk_req.content
+        atk_req_content = unicode(atk_req.content, errors="replace")
         for k, v in atk_params.iteritems():
             atk_req_content = atk_req_content.replace(k, "")
             atk_req_content = atk_req_content.replace(v, "")
@@ -201,8 +203,8 @@ def is_html_diff(a, b):
 
 def diff_html(a, b):
     # normalize all strings, remove all numbers
-    a = regex_nums.sub("", a)
-    b = regex_nums.sub("", b)
+    a = regex_numsym.sub("", a)
+    b = regex_numsym.sub("", b)
 
     # compare and remove commonalities on both
     a_soup = bs4.BeautifulSoup(a, "html.parser")

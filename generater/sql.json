@@ -6,7 +6,6 @@
 "/*comment*/",
 "/*!32302 1/0, */",
 "'; SELECT sleep(10)",
-"'; DROP members --",
 "'1'OR'1'",
 "1' OR '1'='1",
 "1'or'1",
