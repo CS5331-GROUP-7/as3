@@ -2,11 +2,13 @@ import bs4
 import errno
 import json
 import os
+import re
 import requests
 from difflib import Differ
 from result_models import SQLInjectionModel, SSCInjectionModel,\
     DirectoryTraversalModel, OpenRedirectModel, CommandInjectionModel
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+import time
 
 # Disable the HTTPS warnings
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -25,6 +27,8 @@ default_header = {
     "Referrer": "http://google.com",
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
+
+regex_nums = re.compile(r"[\d]")
 
 
 class Injector:
@@ -162,8 +166,8 @@ class Injector:
         """
         # use original params
         o_req = requests.get(url, params=o_params, headers=headers, verify=False)
-        # replace away original param
         o_req_content = o_req.content
+        # replace away original param
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
             if type(v) is list or type(v) is tuple:
@@ -188,6 +192,7 @@ class Injector:
         # use original data
         o_req = requests.post(url, data=o_params, headers=headers, verify=False)
         o_req_content = o_req.content
+        # replace away original param
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
             if type(v) is list or type(v) is tuple:
@@ -213,6 +218,11 @@ def is_html_diff(a, b):
 
 
 def diff_html(a, b):
+    # normalize all strings, remove all numbers
+    a = regex_nums.sub("", a)
+    b = regex_nums.sub("", b)
+
+    # compare and remove commonalities on both
     a_soup = bs4.BeautifulSoup(a, "html.parser")
     b_soup = bs4.BeautifulSoup(b, "html.parser")
 
@@ -226,11 +236,14 @@ def diff_html(a, b):
 
     d = Differ()
     # diff = d.compare(list(a_soup.stripped_strings), list(b_soup.stripped_strings))
-    diff = d.compare(list(a_soup.stripped_strings) + a_pre, list(b_soup.stripped_strings) + b_pre)
+    diff = d.compare(list(a_soup.stripped_strings) + a_pre,
+                     list(b_soup.stripped_strings) + b_pre)
     return '\n'.join(diff)
 
 
+# start = time.time()
 # i = Injector("sample_p2.json")
 i = Injector(p2_file_path)
 i.start_inject()
 i.end_inject()
+# print "Elapsed Time: %s" % (time.time() - start)
