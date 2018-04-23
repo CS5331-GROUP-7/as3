@@ -122,9 +122,7 @@ class Spider(scrapy.Spider):
                 cookie_orig = config['default_headers']['Cookie']
                 cookie = cookie_orig+';'+cookie_header
                 config['default_headers']['Cookie']=cookie
-            return self.generate_cookie_item(response.url,config['default_headers']['Cookie'])
-        else:
-            return None
+            #return self.generate_cookie_item(response.url,config['default_headers']['Cookie'])
     def parse(self, response):
         url = urlparse.urlparse(response.url)
         hostname = url.hostname

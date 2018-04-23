@@ -3,6 +3,10 @@ config = []
 
 own7 = { 'url':'http://own7.com',
          'nocrawl':'logout',
+        'headers':{
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+            'Referer': 'https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py'
+            },
          'login':{
              'url':'http://own7.com/own7secondpage.php',
              'formdata':{
@@ -26,8 +30,9 @@ own7_cookie = {'url':'http://own7.com',
                    'Cookie': 'PHPSESSID=lsvu3sso4reeatetds7cajkvv0; UserDetails=own7own7; loggedin=yes'
                    },
                }
-
+own4 = {'url':'http://own4.com'}
 config.append(own7)
+config.append(own4)
 # config.append(own7_cookie)
 # config.append(target)
 
