@@ -1,5 +1,5 @@
 import json
-
+from urlparse import urlparse
 
 def json_default(obj):
     # to do conversion of obj and fields
@@ -19,11 +19,19 @@ class BaseOutputModel(object):
         self.name = name
         self.results = {}
 
-    def add_payload(self, url, payload):
+    def add_payload(self, full_url, payload):
+        url_comp = urlparse(full_url)
+        url = url_comp.netloc
+        endpoint = url_comp.path
+        out = {
+            "endpoint": endpoint,
+            "params": payload["param"],
+            "method": payload["type"]
+        }
         if url in self.results:
-            self.results.get(url).append(payload)
+            self.results.get(url).append(out)
         else:
-            self.results[url] = [payload]
+            self.results[url] = [out]
 
     def get_json(self):
         # call to generate json output
