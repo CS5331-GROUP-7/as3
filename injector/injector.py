@@ -53,14 +53,15 @@ class Injector:
                 if "headers" in v:
                     header = v["headers"]
 
-                param = None
+                param = {}
                 if "param" in v:
                     param = v["param"]
 
-                self.crawler_info[v["type"]+v["url"]] = {
-                    "headers": header,
-                    "param": param
-                }
+                if "type" in v:
+                    self.crawler_info[v["type"]+v["url"]] = {
+                        "headers": header,
+                        "param": param
+                    }
         hf.close()
 
         # for output
@@ -143,17 +144,23 @@ class Injector:
         o_req_content = o_req.content
         # replace away original param
         for k, v in o_params.iteritems():
-            o_req_content = o_req_content.replace(k, "")
-            if type(v) is list or type(v) is tuple:
-                for p in v:
-                    o_req_content = o_req_content.replace(p, "")
-            else:
-                o_req_content = o_req_content.replace(v, "")
+            try:
+                o_req_content = o_req_content.replace(k, "")
+                if type(v) is list or type(v) is tuple:
+                    for p in v:
+                        o_req_content = o_req_content.replace(p, "")
+                else:
+                    o_req_content = o_req_content.replace(v, "")
+            except:
+                continue
 
         atk_req_content = atk_req.content
         for k, v in atk_params.iteritems():
-            atk_req_content = atk_req_content.replace(k, "")
-            atk_req_content = atk_req_content.replace(v, "")
+            try:
+                atk_req_content = atk_req_content.replace(k, "")
+                atk_req_content = atk_req_content.replace(v, "")
+            except:
+                continue
 
         # workaround, may need additional check for wanted domain
         if atk_type == "Open Redirect" \

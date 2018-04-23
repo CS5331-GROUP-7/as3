@@ -9,7 +9,7 @@
     "; echo '$flag'",
     "netstat; ifconfig; netstat; ifconfig; uname -a",
     "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a",
-    "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+    "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a",
     "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
   ]
 }
