@@ -77,10 +77,10 @@ class Generater:
 def main():
     generater = Generater();
     #generater.generate('Directory Traversal','traversal.json');
-    #generater.generate('Directory Traversal','traversal-passwd.txt');
-    generater.generate('SQL Injection','sql.json');
-    generater.generate('Command Injection','commend.json');
-    generater.generate('Open Redirect','redirect.json');
+    generater.generate('Directory Traversal','traversal-passwd.json')
+    generater.generate('SQL Injection','sql.json')
+    generater.generate('Command Injection','commend.json')
+    generater.generate('Open Redirect','redirect.json')
     
     generater.savefile();
     
