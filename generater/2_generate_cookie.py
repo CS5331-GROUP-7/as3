@@ -86,6 +86,13 @@ class Generater:
                                 paras=dict(item['param'])
                                 paras[data] = payload 
                                 request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
+            '''        
+            for data in item['param']:
+                for payload in payloads:
+                    paras=dict(item['param'])
+                    paras[data] = payload 
+                    request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
+                            
             #if the url in the white list
             if(self.white_list.has_key(item['url'])):
                 for cookieItem in item['CookieList']:
@@ -128,19 +135,20 @@ class Generater:
                                     paras[data] = payload 
                                     request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
                             
-        #print request   
+        #print request  
+        ''' 
         self.result.append(request)
         #print request
     def savefile(self):
         #print self.result
-        with open('p2.json','w') as f:
+        with open('p2_generateCookie.json','w') as f:
             f.write(unicode(json.dumps(self.result, indent = 4)))                
 
 def main():
     generater = Generater();
     #generater.generate('Directory Traversal','traversal.json');
-    generater.generate('Directory Traversal','traversal-passwd.json')
-    generater.generate('SQL Injection','sql.json')
+    #generater.generate('Directory Traversal','traversal-passwd.json')
+    #generater.generate('SQL Injection','sql.json')
     generater.generate('Command Injection','commend.json')
     #generater.generate('Open Redirect','redirect.json')
     

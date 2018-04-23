@@ -11,19 +11,30 @@ def byteify(input):
         return input.encode('utf-8')
     else:
         return input
+def encode(s):
+    return ''.join([bin(ord(c)).replace('0b','') for c in s])
+def urlEncoding(filename,output):
+    with open(filename,mode='r',encoding='utf-8') as file:
+        load_dict = json.load(file)
+        load_dict = byteify(load_dict)
+        payloads = load_dict['payloads']
+        result = []
+        for payload in payloads:
+    	    a = urllib.quote_plus(payload)
+    	    result.append(a)
+        with open(output,'w') as f:
+            f.write(unicode(json.dumps({'payloads':result})))    
+def BinaryEncoding(filename,output):
+    with open(filename,mode='r',encoding='utf-8') as file:
+        load_dict = json.load(file)
+        load_dict = byteify(load_dict)
+        payloads = load_dict['payloads']
+        result = []
+        for payload in payloads:
+            a = encode(payload)
+            result.append(a)
+        with open(output,'w') as f:
+            f.write(unicode(json.dumps({'payloads':result})))            
 
-def savefile(self):
-    #print self.result
-    with open('sql_plus.json','w') as f:
-        f.write(unicode(json.dumps(self.result, indent = 4)))                
-
-with open('sql.json',mode='r',encoding='utf-8') as file:
-    load_dict = json.load(file)
-    load_dict = byteify(load_dict)
-    payloads = load_dict['payloads']
-    result = []
-    for payload in payloads:
-	    a = urllib.quote_plus(payload)
-	    result.append(a)
-    with open('sql_plus.json','w') as f:
-        f.write(unicode(json.dumps({'payloads':result})))                
+urlEncoding('sql.json','sql_url.json')
+BinaryEncoding('sql.json','sql_bin.json')
