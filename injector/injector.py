@@ -29,7 +29,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_nums = re.compile(r"[\d]")
+regex_numsym = re.compile(r"[\d|_^+]")
 
 
 class Injector:
@@ -141,26 +141,20 @@ class Injector:
             return False
 
         # use original params
-        o_req_content = o_req.content
+        o_req_content = unicode(o_req.content, errors="replace")
         # replace away original param
         for k, v in o_params.iteritems():
-            try:
-                o_req_content = o_req_content.replace(k, "")
-                if type(v) is list or type(v) is tuple:
-                    for p in v:
-                        o_req_content = o_req_content.replace(p, "")
-                else:
-                    o_req_content = o_req_content.replace(v, "")
-            except:
-                continue
+            o_req_content = o_req_content.replace(k, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    o_req_content = o_req_content.replace(p, "")
+            else:
+                o_req_content = o_req_content.replace(v, "")
 
-        atk_req_content = atk_req.content
+        atk_req_content = unicode(atk_req.content, errors="replace")
         for k, v in atk_params.iteritems():
-            try:
-                atk_req_content = atk_req_content.replace(k, "")
-                atk_req_content = atk_req_content.replace(v, "")
-            except:
-                continue
+            atk_req_content = atk_req_content.replace(k, "")
+            atk_req_content = atk_req_content.replace(v, "")
 
         # workaround, may need additional check for wanted domain
         if atk_type == "Open Redirect" \
@@ -208,8 +202,8 @@ def is_html_diff(a, b):
 
 def diff_html(a, b):
     # normalize all strings, remove all numbers
-    a = regex_nums.sub("", a)
-    b = regex_nums.sub("", b)
+    a = regex_numsym.sub("", a)
+    b = regex_numsym.sub("", b)
 
     # compare and remove commonalities on both
     a_soup = bs4.BeautifulSoup(a, "html.parser")
