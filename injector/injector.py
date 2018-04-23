@@ -8,6 +8,7 @@ from difflib import Differ
 from result_models import SQLInjectionModel, SSCInjectionModel,\
     DirectoryTraversalModel, OpenRedirectModel, CommandInjectionModel
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+from urlparse import urlparse
 import time
 
 # Disable the HTTPS warnings
@@ -105,7 +106,8 @@ class Injector:
                                      p["type"].upper(),
                                      p["param"],
                                      o_params,
-                                     headers)
+                                     headers,
+                                     p["class"])
                 if res is False or res is None:
                     continue
 
@@ -125,10 +127,40 @@ class Injector:
                     continue
                 print(str.format("[VUL]: {} ({})", p["url"], p["type"]))
 
-    def do_inject(self, url, method, atk_params, o_params, headers):
+    def do_inject(self, url, method, atk_params, o_params, headers, atk_type):
         if method.upper() == "GET":
-            return self.do_get(url, atk_params, o_params, headers)
-        return self.do_post(url, atk_params, o_params, headers)
+            o_req = requests.get(url, params=o_params, headers=headers, verify=False)
+            atk_req = requests.get(url, params=atk_params, headers=headers, verify=False)
+        else:
+            o_req = requests.post(url, data=o_params, headers=headers, verify=False)
+            atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
+
+        if o_req.status_code == 500 or atk_req.status_code == 500:
+            print(str.format("[WARN]: Status 500 encountered while processing request for  ({})", url, method))
+            return False
+
+        # use original params
+        o_req_content = o_req.content
+        # replace away original param
+        for k, v in o_params.iteritems():
+            o_req_content = o_req_content.replace(k, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    o_req_content = o_req_content.replace(p, "")
+            else:
+                o_req_content = o_req_content.replace(v, "")
+
+        atk_req_content = atk_req.content
+        for k, v in atk_params.iteritems():
+            atk_req_content = atk_req_content.replace(k, "")
+            atk_req_content = atk_req_content.replace(v, "")
+
+        # workaround, may need additional check for wanted domain
+        if atk_type == "Open Redirect" \
+                and urlparse(atk_req.url).netloc != urlparse(o_req.url).netloc:
+            return True
+
+        return is_html_diff(o_req_content, atk_req_content)
 
     def end_inject(self):
         # check for existence of output dir
@@ -158,56 +190,6 @@ class Injector:
         with open(results_cmi, "w") as cmif:
             cmif.write(self.cmdi_results.get_json())
         cmif.close()
-
-    def do_get(self, url, atk_params, o_params, headers):
-        """
-        GET requests
-        :return:
-        """
-        # use original params
-        o_req = requests.get(url, params=o_params, headers=headers, verify=False)
-        o_req_content = o_req.content
-        # replace away original param
-        for k, v in o_params.iteritems():
-            o_req_content = o_req_content.replace(k, "")
-            if type(v) is list or type(v) is tuple:
-                for p in v:
-                    o_req_content = o_req_content.replace(p, "")
-            else:
-                o_req_content = o_req_content.replace(v, "")
-
-        atk_req = requests.get(url, params=atk_params, headers=headers, verify=False)
-        atk_req_content = atk_req.content
-        for k, v in atk_params.iteritems():
-            atk_req_content = atk_req_content.replace(k, "")
-            atk_req_content = atk_req_content.replace(v, "")
-
-        return is_html_diff(o_req_content, atk_req_content)
-
-    def do_post(self, url, atk_params, o_params, headers):
-        """
-        POST requests
-        :return:
-        """
-        # use original data
-        o_req = requests.post(url, data=o_params, headers=headers, verify=False)
-        o_req_content = o_req.content
-        # replace away original param
-        for k, v in o_params.iteritems():
-            o_req_content = o_req_content.replace(k, "")
-            if type(v) is list or type(v) is tuple:
-                for p in v:
-                    o_req_content = o_req_content.replace(p, "")
-            else:
-                o_req_content = o_req_content.replace(v, "")
-
-        atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
-        atk_req_content = atk_req.content
-        for k, v in atk_params.iteritems():
-            atk_req_content = atk_req_content.replace(k, "")
-            atk_req_content = atk_req_content.replace(v, "")
-
-        return is_html_diff(o_req_content, atk_req_content)
 
 
 def is_html_diff(a, b):

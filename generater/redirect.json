@@ -1,1 +1,8 @@
-{"payloads":["https://attracker.com"]}
+{
+  "payloads": [
+    "https://status.github.com/messages",
+    "https%3A%2F%2Fstatus.github.com%2Fmessages",
+    "status.github.com%2Fmessages",
+    "https://attacker.com"
+  ]
+}
