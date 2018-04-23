@@ -2,12 +2,11 @@ import json
 config = []
 
 own7 = { 'url':'http://own7.com',
-         'username':'own7',
-         'password':'own7',
+         'nocrawl':'logout',
          'login':{
-             'url':'http://own7.com/own2secondpage.php',
+             'url':'http://own7.com/own7secondpage.php',
              'formdata':{
-                 'username':'own7',
+                 'user':['own7'],
                  'password':'own7',
                  'others':'test'
                  }
@@ -29,7 +28,7 @@ own7_cookie = {'url':'http://own7.com',
                }
 
 config.append(own7)
-#config.append(own7_cookie)
+# config.append(own7_cookie)
 # config.append(target)
 
 

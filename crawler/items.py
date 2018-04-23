@@ -13,3 +13,8 @@ class Item(scrapy.Item):
     type = scrapy.Field()
     param = scrapy.Field()
     headers = scrapy.Field()
+    cookies = scrapy.Field()
+
+class CookieItem(scrapy.Item):
+    url = scrapy.Field()
+    cookies = scrapy.Field()

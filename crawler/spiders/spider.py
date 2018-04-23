@@ -6,6 +6,7 @@ import logging
 from lxml import html
 import urlparse
 import json
+from urllib import urlencode
 
 def log(msg):
     logging.log(45,msg)
@@ -22,11 +23,10 @@ def _retrieve_form_element(form, origin_url):
             fields[x.name] = [""]
         elif x.name and ("type" in x.keys() and x.type != "submit") and not ("Fatal error" in x.value):
             fields[x.name] = [x.value]
-
     url = form.action
     if (url is None) or (url is ""):
         url = origin_url
-    return {"fields": fields, "url": url}
+    return {"fields": fields, "url": url,"method":form.method}
 
 
 def fetch_form(url, body):
@@ -59,17 +59,22 @@ class Spider(scrapy.Spider):
         super(Spider, self).__init__(*args, **kwargs)
         self.config = {} # rules per host name
 
-        self.default_headers = {}
-        self.allowed_domains = {}
+    def get_config(self,hostname):
+        config = {'default_headers':{},'allowed_domains':[],'nocrawl':[]}
+        if hostname in self.config:
+            config = self.config[hostname]
+        else:
+            self.config[hostname]=config
+        return config
 
     def start_requests(self):
         items_to_crawl = json.load(open('config.json'))
         for item in items_to_crawl:
-            config = {'default_headers':None,'allowed_domains':[],'nocrawl':[]}
 
             url_str = item['url']
             url = urlparse.urlparse(url_str)
             hostname = url.hostname
+            config = self.get_config(hostname)
 
             if 'headers' in item:
                 config['default_headers'] = item['headers']
@@ -89,60 +94,94 @@ class Spider(scrapy.Spider):
             self.config[hostname]=config
 
             if 'login' in item:
-                pass
-                #todo login
-            yield scrapy.Request(url=url_str,meta={'dont_merge_cookies': True},headers=config['default_headers'],callback=self.parse)
+                login = item['login']
+                yield scrapy.FormRequest(url=login['url'],
+                                         formdata= login['formdata'],
+                                         callback=self.parse,
+                                         meta={'dont_merge_cookies':True},
+                                         dont_filter=True)
+            else:
+                yield scrapy.Request(url=url_str,meta={'dont_merge_cookies': True},headers=config['default_headers'],callback=self.parse)
 
-
-    def parse(self, response):
-
+    def handle_new_cookies(self,response):
         url = urlparse.urlparse(response.url)
         hostname = url.hostname
+        config=self.get_config(hostname)
+        cookie_header = ''
+        for k,vs in response.headers.iteritems():
+            if k.lower() == 'set-cookie':
+                for v in vs:
+                    if ';' in v: v=v[:v.find(';')]
+                    cookie_header+=v+';'
+        if len(cookie_header)>0:cookie_header=cookie_header[:-1]
 
+        if cookie_header !='':
+            if 'Cookie' not in config['default_headers']:
+                config['default_headers']['Cookie']=cookie_header
+            else:
+                cookie_orig = config['default_headers']['Cookie']
+                cookie = cookie_orig+';'+cookie_header
+                config['default_headers']['Cookie']=cookie
+            return self.generate_cookie_item(response.url,config['default_headers']['Cookie'])
+        else:
+            return None
+    def parse(self, response):
+        url = urlparse.urlparse(response.url)
+        hostname = url.hostname
+        yield self.handle_new_cookies(response)
         log('Crawling ' + response.url)
-        #print response.body
-
-        #print response.body
-        config = {'default_headers':None,'allowed_domains':[],'nocrawl':[]}
-        if hostname in self.config:
-            config = self.config[hostname]
+        config = self.get_config(hostname)
 
         default_headers = config['default_headers']
         allowed_domains = config['allowed_domains']
         nocrawl = config['nocrawl']
+        forms = fetch_form(response.url, response.body)
 
-        post_forms = fetch_form(response.url, response.body)
-        for post_form in post_forms:
-            post_item = self.generate_post_item(post_form)
+        for form in forms:
+            item = self.generate_item_from_form(form,default_headers)
 
-            if is_valid(post_item['url'],allowed_domains,nocrawl):
-                yield scrapy.Request(url=post_item['url'],meta={'dont_merge_cookies': True},headers=default_headers,callback=self.parse)
+            if True:#is_valid(item['url'],allowed_domains,nocrawl):
+                yield scrapy.Request(url=item['url'],
+                                     meta={'dont_merge_cookies': True},
+                                     headers=default_headers,
+                                     callback=self.parse)
             # if no parameters don't include in potential list
-            if len(post_item['param'])!=0:
-                yield post_item
+            #if len(item['param'])!=0:
+            yield item
 
 
-        yield self.generate_get_item(response)
+        yield self.generate_item_from_url(response,default_headers)
         # Find links to the next page
         links = response.css('a::attr(href)').extract()
 
         for l in links:
             nexturl_str = response.urljoin(l)
-
             if is_valid(nexturl_str,allowed_domains,nocrawl):
-                yield scrapy.Request(url=nexturl_str,headers=default_headers,callback=self.parse)
+                yield scrapy.Request(url=nexturl_str,
+                                     headers=default_headers,
+                                     meta={'dont_merge_cookies':True},
+                                     callback=self.parse)
 
-    def generate_post_item(self, post_form):
-        post_item = Item()
-        post_item["url"] = post_form["url"]
-        post_item["param"] = post_form["fields"]
-        post_item["type"] = "POST"
-        return post_item
-        # if bool(post_item["param"]):
-            # return post_item
-        # return None
+    def generate_cookie_item(self,url,cookie_header):
+        item = CookieItem()
+        item [ 'url' ] = url
+        cookies = {}
+        if cookie_header!='':
+            cookies_str = cookie_header.split(';')
+            for c_str in cookies_str:
+                c = c_str.split('=')
+                cookies[c[0]]=c[1]
+        item['cookies'] = cookies
+        return item
+    def generate_item_from_form(self, form,default_headers):
+        item = Item()
+        item["url"] = form["url"]
+        item["param"] = form["fields"]
+        item["type"] = form['method']
+        item['headers'] = default_headers
+        return item
 
-    def generate_get_item(self, response):
+    def generate_item_from_url(self, response,default_headers):
         parsed = urlparse.urlparse(response.url)
         parameters = urlparse.parse_qs(parsed.query)
 
@@ -163,6 +202,7 @@ class Spider(scrapy.Spider):
             "referer": referer,
             "user-agent": response.request.headers["User-Agent"]
         }
-        if len(item['param'])==0:
-            return None
+        item['headers'].update(default_headers)
+        # if len(item['param'])==0:
+            # return None
         return item
