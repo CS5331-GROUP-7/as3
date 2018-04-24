@@ -31,20 +31,31 @@ own7_cookie = {'url':'http://own7.com',
                    },
                }
 own4 = {'url':'https://own4.com'}
+
+app1 = {'url':'http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080/',
+        'login': {
+            'url' : "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080/princess.php",
+             'formdata': {
+                 'target': ["http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080/adventure/"]
+             }
+        }
+    }
 app2 = {'url':'http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8081/',
          'login':{
-             'url':'https://own7.com/own7secondpage.php',
+             'url':'http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8081/',
              'formdata':{
-                 'user':['own7'],
-                 'password':'own7',
+                 'username':['morty'],
+                 'password':'240610708',
                  'others':'test'
                  }
              }
         }
+
+config.append(app1)
 config.append(app2)
 # config.append(own7)
 #config.append(own4)
-config.append(app2)
+# config.append(app2)
 
 # config.append({"url": "https://own1.com"})
 # config.append({"url": "https://own2.com"})
@@ -52,13 +63,13 @@ config.append(app2)
 # config.append({"url": "https://own4.com"})
 # config.append({"url": "https://own5.com"})
 # config.append({"url": "https://own6.com"})
-config.append(own7)
+# config.append(own7)
 # config.append({"url": "https://own8.com"})
 # config.append({"url": "https://own9.com"})
 # config.append({"url": "https://own10.com"})
 # config.append({"url": "https://own11.com"})
 # # config.append(own7_cookie)
-config.append(target)
+# config.append(target)
 
 
 with open('config.json', 'w') as outfile:
