@@ -11,14 +11,24 @@
 			$randomString .= $characters[rand(0, $charactersLength - 1)];
 		}
 		return $randomString;
-	}
-
+    }
+    if(isset($_GET['csrftoken']) && !empty($_GET['app'])){
+        echo "csrftoken = ".$_GET['csrftoken'].'<br/>';
+    } else {
+        echo "no csrftoken<br/>";
+    }
 	echo genRandom();
 
 ?>
 
 </body>
 
+<form action="p2.php" name="b0">
+    <input type="hidden" name="csrftoken" value="<?php echo genRandom()?>"/>
+	<input type="submit" value="Submit with csrf">
+</form>
+
 <form action="../own7secondpage.php" name="b1">
+    <input type="hidden" name=csrftoken" value="abcdef"/>
 	<input type="submit" value="Return">
 </form>
