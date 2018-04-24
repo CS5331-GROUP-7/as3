@@ -1,0 +1,14 @@
+{
+    "class": "Open Redirect", 
+    "results": {
+        "ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080": [
+            {
+                "endpoint": "/princess.php", 
+                "params": {
+                    "target": "https://status.github.com/messages"
+                }, 
+                "method": "GET"
+            }
+        ]
+    }
+}

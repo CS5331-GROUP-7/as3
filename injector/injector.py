@@ -20,7 +20,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 p1_file_path = "../crawler/p1.json"
 p2_file_path = "../generater/p2.json"
 
-results_dir = "../results/"
+results_dir = "../results_e/"
 results_sql = results_dir + "sql_results.json"
 results_ssc = results_dir + "ssc_results.json"
 results_dtr = results_dir + "dtr_results.json"
@@ -86,11 +86,11 @@ class Injector:
         # start attacking
         # self.start_inject()
 
-        # if not self.sqli_results.results\
-        #         and not self.ssci_results.results\
-        #         and not self.dtra_results.results\
-        #         and not self.opre_results.results\
-        #         and not self.cmdi_results.results:
+        # if not self.sqli_results.results_e\
+        #         and not self.ssci_results.results_e\
+        #         and not self.dtra_results.results_e\
+        #         and not self.opre_results.results_e\
+        #         and not self.cmdi_results.results_e:
         #     print("==== NO RESULTS ====")
 
         # end and output
@@ -204,6 +204,7 @@ class Injector:
                 atk_req_content = atk_req_content.replace(v, "")
 
         # workaround, may need additional check for wanted domain
+
         if atk_type == "Open Redirect" \
                 and urlparse(atk_req.url).netloc != urlparse(o_req.url).netloc:
             return True
@@ -295,6 +296,10 @@ def tag_visible(element):
 # start = time.time()
 # i = Injector("sample_p2.json")
 i = Injector(p2_file_path)
+i.start_inject()
+i.end_inject()
+
+i = Injector("../generater/p2_manual.json")
 i.start_inject()
 i.end_inject()
 # print "Elapsed Time: %s" % (time.time() - start)

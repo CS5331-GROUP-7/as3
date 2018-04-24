@@ -1,0 +1,50 @@
+[
+    [
+        {
+            "url": "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080/princess.php",
+            "type": "GET",
+            "class": "Open Redirect",
+            "param": {
+                "target": "https://status.github.com/messages"
+            }
+        },
+        {
+            "url": "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8081/secretclub.php",
+            "type": "GET",
+            "class": "Open Redirect",
+            "param": {
+                "drinks": "drinks#https://status.github.com/messages"
+            }
+        },
+        {
+            "url": "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8082/escape",
+            "type": "GET",
+            "class": "Open Redirect",
+            "header": {
+                "Cookie": "PHPSESSID=b1i60o2i30fs9grr1a2s3ukep4"
+            },
+            "param": {
+                "target": "https://status.github.com/messages"
+            }
+        },
+        {
+            "url": "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8080/adventure/boogle/googla/peach",
+            "type": "GET",
+            "class": "Command Injection",
+            "param": {
+                "princess": "/etc/passwd"
+            }
+        },
+        {
+            "url": "http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8082/file",
+            "type": "GET",
+            "class": "Command Injection",
+            "header": {
+                "Cookie": "PHPSESSID=b1i60o2i30fs9grr1a2s3ukep4"
+            },
+            "param": {
+                "filename": "/etc/passwd"
+            }
+        }
+    ]
+]

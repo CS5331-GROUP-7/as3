@@ -18,7 +18,7 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 p1_file_path = "../crawler/p1.json"
 p2_file_path = "../generater/p2.json"
 
-results_dir = "../results/"
+results_dir = "../results_e/"
 results_sql = results_dir + "sql_results.json"
 results_ssc = results_dir + "ssc_results.json"
 results_dtr = results_dir + "dtr_results.json"
