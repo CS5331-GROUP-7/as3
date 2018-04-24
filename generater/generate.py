@@ -132,12 +132,13 @@ class Generater:
                                             request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
             #if the url is not in the white list
             else:
-                for cookieItem in item['CookieList']:
-                    temp = dict(item['CookieList'])
+                for cookieItem1 in item['CookieList']:
                     for payload1 in payloads:
+                        temp = dict(item['CookieList'])
 
                         z=dict(item['headers'])
-                        temp[cookieItem] = payload1
+                        temp[cookieItem1] = payload1
+                        #print cookieItem1
                         tempString1 = ""
                         for i,cookieItem in enumerate(temp):
                             if(i!=len(temp)):
@@ -146,6 +147,7 @@ class Generater:
                                 tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem]
 
                         z['Cookie']=tempString1
+                        #print tempString1
                         if(len(item['param'])<=0):
                             request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
                         else:
