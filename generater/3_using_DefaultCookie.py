@@ -33,7 +33,7 @@ class Generater:
             load_dict = json.load(file)
             load_dict = byteify(load_dict)
             self.urls = load_dict
-            print self.urls
+            #print self.urls
         
         with open('default.json',mode='r',encoding='utf-8') as file:
             load_dict = json.load(file)
@@ -61,17 +61,34 @@ class Generater:
         for item in self.urls:
             #if it in the white list
             #add default cookie
+            tempString = ""
             z=dict(item['headers'])
             temp = dict(item['CookieList'])
-            z['Cookie']=dict(temp)
-            if(len(item['param'])<=0):
-                request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
+            for i,cookieItem in enumerate(temp):
+                if(i!=len(temp)):
+                    tempString = tempString + cookieItem+'=' + temp[cookieItem] + ';'
+                else:
+                    tempString = tempString + cookieItem+'=' + temp[cookieItem]
+
+            if(len(temp)>0):
+                z['Cookie']=tempString
+                if(len(item['param'])<=0):
+                    request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
+                else:         
+                    for data in item['param']:
+                        for payload in payloads:
+                            paras=dict(item['param'])
+                            paras[data] = payload 
+                            request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})    
             else:
-                for data in item['param']:
-                    for payload in payloads:
-                        paras=dict(item['param'])
-                        paras[data] = payload 
-                        request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
+                if(len(item['param'])<=0):
+                    request.append({"class":classname,"url":item['url'],"header":item['headers'],"type":item['type']})    
+                else:         
+                    for data in item['param']:
+                        for payload in payloads:
+                            paras=dict(item['param'])
+                            paras[data] = payload 
+                            request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
             '''                   
             #if the url in the white list
             if(self.white_list.has_key(item['url'])):
