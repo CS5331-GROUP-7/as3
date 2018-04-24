@@ -1,4 +1,4 @@
-127.0.0.1	localhost
+127.0.0.1 localhost
 127.0.1.1	benchmark
 
 # The following lines are desirable for IPv6 capable hosts
@@ -11,15 +11,15 @@ ff02::2 ip6-allrouters
 127.0.0.1	target.com
 127.0.0.1	target.com
 
-127.0.0.1	own1.com
-127.0.0.1	own2.com
-127.0.0.1	own3.com
-127.0.0.1	own4.com
-127.0.0.1	own5.com
-127.0.0.1	own6.com
-127.0.0.1	own7.com
-127.0.0.1	own8.com
-127.0.0.1	own9.com
-127.0.0.1	own10.com
-127.0.0.1   own11.com
-127.0.0.1   wsb.com
+210.23.28.71	own1.com
+210.23.28.71	own2.com
+210.23.28.71	own3.com
+210.23.28.71	own4.com
+210.23.28.71	own5.com
+210.23.28.71	own6.com
+210.23.28.71	own7.com
+210.23.28.71	own8.com
+210.23.28.71	own9.com
+210.23.28.71	own10.com
+210.23.28.71   own11.com
+210.23.28.71   wsb.com

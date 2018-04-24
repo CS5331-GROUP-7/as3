@@ -82,13 +82,13 @@ class Generater:
                             request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})    
             else:
                 if(len(item['param'])<=0):
-                    request.append({"class":classname,"url":item['url'],"header":item['headers'],"type":item['type']})    
+                    request.append({"class":classname,"url":item['url'],"type":item['type']})    
                 else:         
                     for data in item['param']:
                         for payload in payloads:
                             paras=dict(item['param'])
                             paras[data] = payload 
-                            request.append({"class":classname,"url":item['url'],"header":item['headers'],"param":paras,"type":item['type']})
+                            request.append({"class":classname,"url":item['url'],"param":paras,"type":item['type']})
             '''                   
             #if the url in the white list
             if(self.white_list.has_key(item['url'])):
