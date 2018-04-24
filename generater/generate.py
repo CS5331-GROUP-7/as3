@@ -33,7 +33,7 @@ class Generater:
             load_dict = json.load(file)
             load_dict = byteify(load_dict)
             self.urls = load_dict
-            print self.urls
+            #print self.urls
         
         with open('default.json',mode='r',encoding='utf-8') as file:
             load_dict = json.load(file)
@@ -73,19 +73,7 @@ class Generater:
                             paras=dict(item['param'])
                             paras[data] = payload 
                             request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
-            else:
-                print "here"
-                for payload1 in payloads:
-                    z=dict(item['headers'])
-                    z['Cookie']=payload1
-                    if(len(item['param'])<=0):
-                        request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
-                    else:
-                        for data in item['param']:
-                            for payload in payloads:
-                                paras=dict(item['param'])
-                                paras[data] = payload 
-                                request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
+           
             #if the url in the white list
             if(self.white_list.has_key(item['url'])):
                 for cookieItem in item['CookieList']:
