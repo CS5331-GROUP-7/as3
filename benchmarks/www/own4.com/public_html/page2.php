@@ -1,8 +1,11 @@
-<?
+<?php
+
 #For testing:
 #$value = '../../../../../../../../../../../../etc/passwd';
-#setcookie("Own4Cookie", $value);
-#echo $_COOKIE["Own4Cookie"];
+echo 'here';
+$value = '../../../../../../../../README';
+setcookie("Own4Cookie", $value);
+echo $_COOKIE["Own4Cookie"];
 ?>
 <html>
 <form action="index.html">

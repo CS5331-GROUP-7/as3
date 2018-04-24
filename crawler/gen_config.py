@@ -32,11 +32,11 @@ own7_cookie = {'url':'http://own7.com',
                }
 own4 = {'url':'http://own4.com'}
 # config.append(own7)
-# config.append(own4)
+config.append(own4)
 
 # config.append({"url": "https://own1.com"})
 # config.append({"url": "https://own2.com"})
-config.append({"url": "https://own3.com"})
+#config.append({"url": "https://own3.com"})
 # config.append({"url": "https://own4.com"})
 # config.append({"url": "https://own5.com"})
 # config.append({"url": "https://own6.com"})
