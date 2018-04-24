@@ -30,7 +30,7 @@ own7_cookie = {'url':'http://own7.com',
                    'Cookie': 'PHPSESSID=lsvu3sso4reeatetds7cajkvv0; UserDetails=own7own7; loggedin=yes'
                    },
                }
-own4 = {'url':'http://own4.com'}
+own4 = {'url':'https://own4.com'}
 # config.append(own7)
 config.append(own4)
 
