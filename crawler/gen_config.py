@@ -31,8 +31,20 @@ own7_cookie = {'url':'http://own7.com',
                    },
                }
 own4 = {'url':'https://own4.com'}
+app2 = {'url':'http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8081/',
+         'login':{
+             'url':'https://own7.com/own7secondpage.php',
+             'formdata':{
+                 'user':['own7'],
+                 'password':'own7',
+                 'others':'test'
+                 }
+             }
+        }
+config.append(app2)
 # config.append(own7)
-config.append(own4)
+#config.append(own4)
+config.append(app2)
 
 # config.append({"url": "https://own1.com"})
 # config.append({"url": "https://own2.com"})

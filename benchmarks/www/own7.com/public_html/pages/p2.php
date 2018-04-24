@@ -12,7 +12,7 @@
 		}
 		return $randomString;
     }
-    if(isset($_GET['csrftoken']) && !empty($_GET['app'])){
+    if(isset($_GET['csrftoken']) && !empty($_GET['csrftoken'])){
         echo "csrftoken = ".$_GET['csrftoken'].'<br/>';
     } else {
         echo "no csrftoken<br/>";
@@ -28,7 +28,7 @@
 	<input type="submit" value="Submit with csrf">
 </form>
 
-<form action="../own7secondpage.php" name="b1">
-    <input type="hidden" name=csrftoken" value="abcdef"/>
+<form action="p4.php" name="b1">
+    <input type="hidden" name="csrftoken" value="abcdef"/>
 	<input type="submit" value="Return">
 </form>

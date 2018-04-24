@@ -1,7 +1,7 @@
 import json
 config = []
 
-target = { 'url':'https://own7.com/',
+target = { 'url':'http://ec2-54-254-169-160.ap-southeast-1.compute.amazonaws.com:8081/',
          }
 config.append(target)
 

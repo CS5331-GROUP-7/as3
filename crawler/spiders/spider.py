@@ -142,11 +142,30 @@ class Spider(scrapy.Spider):
         for form in forms:
             item = self.generate_item_from_form(form,default_headers)
 
-            if True:#is_valid(item['url'],allowed_domains,nocrawl):
-                yield scrapy.Request(url=item['url'],
-                                     meta={'dont_merge_cookies': True},
-                                     headers=default_headers,
-                                     callback=self.parse)
+            if is_valid(item['url'],allowed_domains,nocrawl):
+                if item['type']=='GET':
+
+                    url = item['url']
+                    if len(item['param'].keys())>0:
+                        url = url+'?'+urlencode(item['param'],True)
+
+                    yield scrapy.Request(url=url,
+                                         meta={'dont_merge_cookies': True},
+                                         headers=default_headers,
+                                         callback=self.parse)
+
+                elif item['type']=='POST':
+                    url = item['url']
+                    formdata = None
+                    if len(item['param'].keys())>0:
+                        formdata = item['param']
+
+
+                    yield scrapy.FormRequest(url=url,
+                                             formdata=formdata,
+                                             callback=self.parse,
+                                             meta={'dont_merge_cookies':True})
+
             # if no parameters don't include in potential list
             #if len(item['param'])!=0:
             yield item

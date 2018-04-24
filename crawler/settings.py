@@ -15,6 +15,7 @@ SPIDER_MODULES = ['crawler.spiders']
 NEWSPIDER_MODULE = 'crawler.spiders'
 
 DUPEFILTER_CLASS = 'scrapy.dupefilters.RFPDupeFilter'
+#DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
 #DUPEFILTER_CLASS = 'crawler.duplicate_filter.CustomFilter'
 DUPEFILTER_DEBUG = True
 
