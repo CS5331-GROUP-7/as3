@@ -23,9 +23,27 @@ class BaseOutputModel(object):
         url_comp = urlparse(full_url)
         url = url_comp.netloc
         endpoint = url_comp.path
+
+        params = {}
+        headers = {}
+        if "header" in payload:
+            for k in payload["header"]:
+                if k.lower() == "referer" or k.lower() == "user-agent":
+                    continue
+                headers[k] = payload["header"][k]
+
+        if "param" in payload:
+            params = dict(payload["param"], **headers)
+        else:
+            params = headers
+        # elif "param" in payload and "header" not in payload:
+        #     params = payload["param"]
+        # elif "param" not in payload and "header" in payload:
+        #     params = payload["header"]
+
         out = {
             "endpoint": endpoint,
-            "params": payload["param"],
+            "params": params,
             "method": payload["type"]
         }
         if url in self.results:

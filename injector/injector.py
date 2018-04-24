@@ -31,7 +31,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_numsym = re.compile(r"[\d|_^+]")
+regex_numsym = re.compile(r"[\d|_^+]|(.{1,4}/)")
 
 
 class Injector:
@@ -59,11 +59,20 @@ class Injector:
                 if "param" in v:
                     param = v["param"]
 
-                if "type" in v:
+                if "type" in v and "param" in v and "headers" in v:
                     self.crawler_info[v["type"]+v["url"]] = {
                         "headers": header,
                         "param": param
                     }
+                elif "type" in v and "param" not in v and "headers" in v:
+                    self.crawler_info[v["type"] + v["url"]] = {
+                        "headers": header
+                    }
+                elif "type" in v and "param" in v and "headers" not in v:
+                    self.crawler_info[v["type"] + v["url"]] = {
+                        "param": param
+                    }
+
         hf.close()
 
         # for output
@@ -95,21 +104,37 @@ class Injector:
         for p in tqdm(self.payloads):
             url = p["url"]
             key = p["type"]+url
+
             o_params = {}
-            headers = default_header
+            o_headers = default_header
             if key in self.crawler_info:
                 vals = self.crawler_info.get(key)
                 if "param" in vals:
                     o_params = vals["param"]
                 if "headers" in vals and vals["headers"] is not None:
-                    headers = vals["headers"]
+                    o_headers = vals["headers"]
+
+            atk_params = {}
+            atk_headers = o_headers
+            if "header" in p:
+                atk_headers = p["header"]
+                for i in atk_headers:
+                    if type(atk_headers[i]) is dict:
+                        atk_headers[i] = ''.join('{}={}'.format(key, val.encode('ascii', 'ignore')) for key, val in atk_headers[i].items())
+                    if atk_headers[i] is None:
+                        continue
+                    atk_headers[i] = atk_headers[i].encode('ascii', 'ignore')
+            if "param" in p:
+                atk_params = p["param"]
 
             res = self.do_inject(url,
                                  p["type"].upper(),
-                                 p["param"],
+                                 atk_params,
                                  o_params,
-                                 headers,
+                                 o_headers,
+                                 atk_headers,
                                  p["class"])
+
             if res is False or res is None:
                 continue
 
@@ -129,13 +154,13 @@ class Injector:
                 continue
             tqdm.write(str.format("[VUL]: {} ({})", p["url"], p["type"]))
 
-    def do_inject(self, url, method, atk_params, o_params, headers, atk_type):
+    def do_inject(self, url, method, atk_params, o_params, o_headers, atk_headers, atk_type):
         if method.upper() == "GET":
-            o_req = requests.get(url, params=o_params, headers=headers, verify=False)
-            atk_req = requests.get(url, params=atk_params, headers=headers, verify=False)
+            o_req = requests.get(url, params=o_params, headers=o_headers, verify=False)
+            atk_req = requests.get(url, params=atk_params, headers=atk_headers, verify=False)
         else:
-            o_req = requests.post(url, data=o_params, headers=headers, verify=False)
-            atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
+            o_req = requests.post(url, data=o_params, headers=o_headers, verify=False)
+            atk_req = requests.post(url, data=atk_params, headers=atk_headers, verify=False)
 
         if o_req.status_code == 500 or atk_req.status_code == 500:
             tqdm.write(str.format("[WARN]: Status 500 encountered while processing request for  ({})", url, method))
@@ -149,13 +174,33 @@ class Injector:
             if type(v) is list or type(v) is tuple:
                 for p in v:
                     o_req_content = o_req_content.replace(p, "")
-            else:
+            elif v is not None:
+                o_req_content = o_req_content.replace(v, "")
+        for k, v in o_headers.iteritems():
+            o_req_content = o_req_content.replace(k, "")
+            if k.lower() == "cookie":
+                a = v.split("=")
+                for s in a:
+                    o_req_content.replace(s, "")
+            elif v is not None:
                 o_req_content = o_req_content.replace(v, "")
 
         atk_req_content = unicode(atk_req.content, errors="replace")
         for k, v in atk_params.iteritems():
             atk_req_content = atk_req_content.replace(k, "")
-            atk_req_content = atk_req_content.replace(v, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    atk_req_content = atk_req_content.replace(p, "")
+            elif v is not None:
+                atk_req_content = atk_req_content.replace(v, "")
+        for k, v in atk_headers.iteritems():
+            atk_req_content = atk_req_content.replace(k, "")
+            if k.lower() == "cookie":
+                a = v.split("=")
+                for s in a:
+                    atk_req_content.replace(s, "")
+            elif v is not None:
+                atk_req_content = atk_req_content.replace(v, "")
 
         # workaround, may need additional check for wanted domain
         if atk_type == "Open Redirect" \
@@ -195,9 +240,22 @@ class Injector:
 
 
 def is_html_diff(a, b):
-    diff_str = diff_html(a, b)
-    if diff_str.count("\n+ ") > diff_str.count("\n- "):
+    diff_str = '\n'.join(diff_html(a, b))
+    if diff_str.count("\n+ ") > diff_str.count("\n- ") + 1:
         return True
+
+    minus = ''
+    add = ''
+    for x in list(diff_html(a, b)):
+        if x.startswith('- '):
+            minus += x
+        elif x.startswith('+ '):
+            add += x
+
+    if len(add) != 0 and len(minus) != 0\
+            and (len(add) / len(minus)) > 11:
+        return True
+
     return False
 
 
@@ -222,7 +280,7 @@ def diff_html(a, b):
     # diff = d.compare(list(a_soup.stripped_strings), list(b_soup.stripped_strings))
     diff = d.compare(list(a_soup.stripped_strings) + a_pre,
                      list(b_soup.stripped_strings) + b_pre)
-    return '\n'.join(diff)
+    return diff
 
 
 # start = time.time()
