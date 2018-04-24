@@ -10,6 +10,7 @@ from result_models import SQLInjectionModel, SSCInjectionModel,\
     DirectoryTraversalModel, OpenRedirectModel, CommandInjectionModel
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import time
+import tqdm
 
 # Disable the HTTPS warnings
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -29,7 +30,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_numsym = re.compile(r"[\d|_^+]|(.{1,4}/)")
+regex_numsym = re.compile(r"[\d|_^+]|(\.{1,4}/)")
 
 sqli_results = SQLInjectionModel()
 ssci_results = SSCInjectionModel()
@@ -224,12 +225,34 @@ def diff_html(a, b):
     return diff
 
 
+def chunks(l, n):
+    """ Yield n successive chunks from l.
+    """
+    newn = int(len(l) / n)
+    for i in xrange(0, n-1):
+        yield l[i*newn:i*newn+newn]
+    yield l[n*newn-newn:]
+
+
+manager = multiprocessing.Manager()
+results = manager.list([])
+
+
+def chunk_attack(chunk):
+    for p in tqdm.tqdm(chunk):
+        res = do_attack(p)
+        if res is None:
+            continue
+        else:
+            results.append(res)
+
+
 def main():
     payloads = setup()
 
-    pool = multiprocessing.Pool(25)
-    results = pool.map(do_attack, payloads)
-    for p in results:
+    pool = multiprocessing.Pool(processes=40)
+    pool.map(chunk_attack, chunks(payloads, 40))
+    for p in tqdm.tqdm(results):
         if p is None:
             continue
         if p["class"] == "SQL Injection":
