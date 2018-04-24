@@ -61,10 +61,17 @@ class Generater:
         for item in self.urls:
             #if it in the white list
             #add default cookie
+            tempString = ""
             z=dict(item['headers'])
             temp = dict(item['CookieList'])
+            for i,cookieItem in enumerate(temp):
+                if(i!=len(temp)):
+                    tempString = tempString + cookieItem+'=' + temp[cookieItem] + ';'
+                else:
+                    tempString = tempString + cookieItem+'=' + temp[cookieItem]
+
             if(len(temp)>0):
-                z['Cookie']=temp
+                z['Cookie']=tempString
                 if(len(item['param'])<=0):
                     request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
                 else:         
@@ -75,18 +82,34 @@ class Generater:
                             request.append({"class":classname,"url":item['url'],"header":z,"param":paras,"type":item['type']})
            
             #if the url in the white list
+            tempString1 = ""
             if(self.white_list.has_key(item['url'])):
                 for cookieItem in item['CookieList']:
                     temp = dict(item['CookieList'])
                     if(white_list[item['url']].has_key('Cookie')):
                         z=dict(item['headers'])
-                        z['Cookie']=dict(temp)
+                        tempString1 = ""
+                        for i,cookieItem in enumerate(temp):
+                            if(i!=len(temp)):
+                                tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem] + ';'
+                            else:
+                                tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem]
+
+                        z['Cookie']=tempString1
                         request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
                     else:   
                         for payload1 in payloads:
                             z=dict(item['headers'])
                             temp[cookieItem] = payload1
-                            z['Cookie']=dict(temp)
+                            tempString1 = ""
+                            for i,cookieItem in enumerate(temp):
+                                if(i!=len(temp)):
+                                    tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem] + ';'
+                                else:
+                                    tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem]
+
+                            z['Cookie']=tempString1
+
                             if(len(item['param'])<=0):
                                 request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
                             else:
@@ -106,7 +129,14 @@ class Generater:
 
                         z=dict(item['headers'])
                         temp[cookieItem] = payload1
-                        z['Cookie']=dict(temp)
+                        tempString1 = ""
+                        for i,cookieItem in enumerate(temp):
+                            if(i!=len(temp)):
+                                tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem] + ';'
+                            else:
+                                tempString1 = tempString1 + cookieItem+'=' + temp[cookieItem]
+
+                        z['Cookie']=tempString1
                         if(len(item['param'])<=0):
                             request.append({"class":classname,"url":item['url'],"header":z,"type":item['type']})    
                         else:
