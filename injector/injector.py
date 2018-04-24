@@ -11,6 +11,7 @@ from result_models import SQLInjectionModel, SSCInjectionModel,\
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from tqdm import tqdm
 from urlparse import urlparse
+from bs4.element import Comment
 import time
 
 # Disable the HTTPS warnings
@@ -31,7 +32,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_numsym = re.compile(r"[\d|_^+]|(.{1,4}/)")
+regex_numsym = re.compile(r"[\d|_^+]|(\.{1,4}/)")
 
 
 class Injector:
@@ -281,6 +282,14 @@ def diff_html(a, b):
     diff = d.compare(list(a_soup.stripped_strings) + a_pre,
                      list(b_soup.stripped_strings) + b_pre)
     return diff
+
+
+def tag_visible(element):
+    if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
+        return False
+    if isinstance(element, Comment):
+        return False
+    return True
 
 
 # start = time.time()

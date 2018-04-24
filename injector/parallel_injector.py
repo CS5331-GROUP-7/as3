@@ -4,6 +4,7 @@ import json
 import re
 import requests
 import multiprocessing
+import urlparse
 from difflib import Differ
 from result_models import SQLInjectionModel, SSCInjectionModel,\
     DirectoryTraversalModel, OpenRedirectModel, CommandInjectionModel
@@ -28,7 +29,7 @@ default_header = {
     "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
 }
 
-regex_nums = re.compile(r"[\d]")
+regex_numsym = re.compile(r"[\d|_^+]|(.{1,4}/)")
 
 sqli_results = SQLInjectionModel()
 ssci_results = SSCInjectionModel()
@@ -73,23 +74,38 @@ def setup():
 def do_attack(p):
     url = p["url"]
     key = p["type"] + url
+
     o_params = {}
-    headers = default_header
+    o_headers = default_header
     if key in crawler_info:
         vals = crawler_info.get(key)
         if "param" in vals:
             o_params = vals["param"]
         if "headers" in vals and vals["headers"] is not None:
-            headers = vals["headers"]
+            o_headers = vals["headers"]
+
+    atk_params = {}
+    atk_headers = o_headers
+    if "header" in p:
+        atk_headers = p["header"]
+        for i in atk_headers:
+            if type(atk_headers[i]) is dict:
+                atk_headers[i] = ''.join('{}={}'.format(key, val.encode('ascii', 'ignore')) for key, val in atk_headers[i].items())
+            if atk_headers[i] is None:
+                continue
+            atk_headers[i] = atk_headers[i].encode('ascii', 'ignore')
+    if "param" in p:
+        atk_params = p["param"]
 
     res = do_inject(url,
-                    p["type"].upper(),
-                    p["param"],
-                    o_params,
-                    headers)
+                 p["type"].upper(),
+                 atk_params,
+                 o_params,
+                 o_headers,
+                 atk_headers,
+                 p["class"])
     if res is False or res is None:
         return None
-
     # add to corresponding result
     # if p["class"] == "SQL Injection":
     #     sqli_results.add_payload(url, p)
@@ -108,44 +124,86 @@ def do_attack(p):
     return p
 
 
-def do_inject(url, method, atk_params, o_params, headers):
+def do_inject(url, method, atk_params, o_params, o_headers, atk_headers, atk_type):
         if method.upper() == "GET":
-            # use original params
-            o_req = requests.get(url, params=o_params, headers=headers, verify=False)
-            atk_req = requests.get(url, params=atk_params, headers=headers, verify=False)
+            o_req = requests.get(url, params=o_params, headers=o_headers, verify=False)
+            atk_req = requests.get(url, params=atk_params, headers=atk_headers, verify=False)
         else:
-            o_req = requests.post(url, data=o_params, headers=headers, verify=False)
-            atk_req = requests.post(url, data=atk_params, headers=headers, verify=False)
+            o_req = requests.post(url, data=o_params, headers=o_headers, verify=False)
+            atk_req = requests.post(url, data=atk_params, headers=atk_headers, verify=False)
 
-        o_req_content = o_req.content
+        if o_req.status_code == 500 or atk_req.status_code == 500:
+            print(str.format("[WARN]: Status 500 encountered while processing request for  ({})", url, method))
+            return False
+
+        # use original params
+        o_req_content = unicode(o_req.content, errors="replace")
         # replace away original param
         for k, v in o_params.iteritems():
             o_req_content = o_req_content.replace(k, "")
             if type(v) is list or type(v) is tuple:
                 for p in v:
                     o_req_content = o_req_content.replace(p, "")
-            else:
+            elif v is not None:
+                o_req_content = o_req_content.replace(v, "")
+        for k, v in o_headers.iteritems():
+            o_req_content = o_req_content.replace(k, "")
+            if k.lower() == "cookie":
+                a = v.split("=")
+                for s in a:
+                    o_req_content.replace(s, "")
+            elif v is not None:
                 o_req_content = o_req_content.replace(v, "")
 
-        atk_req_content = atk_req.content
+        atk_req_content = unicode(atk_req.content, errors="replace")
         for k, v in atk_params.iteritems():
             atk_req_content = atk_req_content.replace(k, "")
-            atk_req_content = atk_req_content.replace(v, "")
+            if type(v) is list or type(v) is tuple:
+                for p in v:
+                    atk_req_content = atk_req_content.replace(p, "")
+            elif v is not None:
+                atk_req_content = atk_req_content.replace(v, "")
+        for k, v in atk_headers.iteritems():
+            atk_req_content = atk_req_content.replace(k, "")
+            if k.lower() == "cookie":
+                a = v.split("=")
+                for s in a:
+                    atk_req_content.replace(s, "")
+            elif v is not None:
+                atk_req_content = atk_req_content.replace(v, "")
+
+        # workaround, may need additional check for wanted domain
+        if atk_type == "Open Redirect" \
+                and urlparse(atk_req.url).netloc != urlparse(o_req.url).netloc:
+            return True
 
         return is_html_diff(o_req_content, atk_req_content)
 
 
 def is_html_diff(a, b):
-    diff_str = diff_html(a, b)
-    if diff_str.count("\n+ ") > diff_str.count("\n- "):
+    diff_str = '\n'.join(diff_html(a, b))
+    if diff_str.count("\n+ ") > diff_str.count("\n- ") + 1:
         return True
+
+    minus = ''
+    add = ''
+    for x in list(diff_html(a, b)):
+        if x.startswith('- '):
+            minus += x
+        elif x.startswith('+ '):
+            add += x
+
+    if len(add) != 0 and len(minus) != 0\
+            and (len(add) / len(minus)) > 11:
+        return True
+
     return False
 
 
 def diff_html(a, b):
     # normalize all strings, remove all numbers
-    a = regex_nums.sub("", a)
-    b = regex_nums.sub("", b)
+    a = regex_numsym.sub("", a)
+    b = regex_numsym.sub("", b)
 
     # compare and remove commonalities on both
     a_soup = bs4.BeautifulSoup(a, "html.parser")
@@ -163,7 +221,7 @@ def diff_html(a, b):
     # diff = d.compare(list(a_soup.stripped_strings), list(b_soup.stripped_strings))
     diff = d.compare(list(a_soup.stripped_strings) + a_pre,
                      list(b_soup.stripped_strings) + b_pre)
-    return '\n'.join(diff)
+    return diff
 
 
 def main():
